@@ -1,0 +1,14 @@
+// -*- c++ -*-
+
+#define RWSIM_VERSION "22.2.3-main"
+#define RWSIM_VERSION_MAJOR 22 
+#define RWSIM_VERSION_MINOR 2
+#define RWSIM_VERSION_PATCH 3
+
+#define RWSIM_REVISION ""
+
+#define RWSIM_HAVE_RWPHYS 1
+/* #undef RWSIM_HAVE_TNTPHYSICS */
+//#define RWSIM_HAVE_BULLET 1
+#define RWSIM_HAVE_ODE 1
+/* #undef RWSIM_HAVE_LUA */

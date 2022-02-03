@@ -1,0 +1,28 @@
+#
+#Set RobWork, RobWorkStudio and RobWorkApp ROOTs
+# 
+
+SET(RWSIM_USE_RWPHYS ON)
+SET(RWSIM_BUILD_TESTS ON)
+#SET(ODE_DIR "C:/local/opende")
+
+#SET(RWSIM_DISABLE_ODE ON)
+#SET(RWSIM_DISABLE_BULLET ON)
+#SET(RWSIM_DISABLE_LUA ON)
+
+#SET(ODE_USE_DOUBLE ON)
+#SET(ODE_USE_DEBUG ON)
+#SET(ODE_USE_SINGLE ON)
+#SET(ODE_LIBRARY_NAME ) # suggest specific library name
+#SET(ODE_LIBRARY_DIR ) # suggest library location
+#SET(ODE_LIBRARIES "ode_double.lib")
+#ADD_DEFINITIONS(-DdDOUBLE)
+
+#SET(RWSIM_USE_BULLET OFF)
+#SET(BULLET_ROOT "C:/local/bullet-2.76/bullet-2.76/") 
+
+IF(ENABLE_COVERAGE)
+ #SET(RW_CXX_FLAGS "-g -O0 -Wall -W -Wshadow -Wunused-variable -Wunused-parameter -Wunused-function -Wunused -Wno-system-headers -Wno-deprecated -Woverloaded-virtual -Wwrite-strings -fPIC -fprofile-arcs -ftest-coverage")
+ SET(CMAKE_C_FLAGS "-g -O0 -Wall -W -fprofile-arcs -ftest-coverage")
+ SET(CMAKE_EXE_LINKER_FLAGS "-fprofile-arcs -ftest-coverage")
+ENDIF()

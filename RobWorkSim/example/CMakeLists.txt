@@ -1,0 +1,10 @@
+cmake_minimum_required(VERSION 3.10  )
+project(RWSimExamples)
+
+add_subdirectory(bootstrap)
+# ADD_SUBDIRECTORY(FalconTeleoperatePlugin)
+add_subdirectory(SimTaskPlugin)
+add_subdirectory(SimTaskVisPlugin)
+add_subdirectory(SimTemplatePlugin)
+add_subdirectory(tools)
+add_subdirectory(tutorials)

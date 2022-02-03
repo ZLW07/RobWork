@@ -1,0 +1,4 @@
+<RobWorkSimTest>
+	<TestfilesDIR>@ROBWORKSIM_TESTFILES_DIR@</TestfilesDIR>
+	<XMLSchemasDIR>@ROBWORKSIM_XMLSCHEMAS_DIR@</XMLSchemasDIR>
+</RobWorkSimTest>
