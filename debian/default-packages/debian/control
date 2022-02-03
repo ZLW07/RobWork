@@ -1,0 +1,768 @@
+
+Source: robwork-default
+Priority: optional
+Maintainer: Kasper Høj Lorenzen <kalor@mmmi.sdu.dk>
+Build-Depends: 
+  debhelper (>= 10), 
+Section: misc
+Standards-Version: 4.1.2
+Homepage: http://www.robwork.dk
+Vcs-Git: https://gitlab.com/sdurobotics/RobWork.git
+Vcs-Browser: https://gitlab.com/sdurobotics/RobWork
+
+Package: sdurw-cmake
+Section: misc
+Priority: optional
+Architecture: amd64
+Depends: 
+ sdurw-cmake1.2,
+ ${misc:Depends} 
+Description: This package installs the default version
+ This is a metapackage containing the default version
+
+Package: libsdurw-dev
+Section: misc
+Priority: optional
+Architecture: amd64
+Depends: 
+ libsdurw1.2-dev,
+ ${misc:Depends} 
+Description: This package installs the default version
+ This is a metapackage containing the default version
+
+Package: libsdurw-core-dev
+Section: misc
+Priority: optional
+Architecture: amd64
+Depends: 
+ libsdurw-core1.2-dev,
+ ${misc:Depends} 
+Description: This package installs the default version
+ This is a metapackage containing the default version
+
+Package: libsdurw-common-dev
+Section: misc
+Priority: optional
+Architecture: amd64
+Depends: 
+ libsdurw-common1.2-dev,
+ ${misc:Depends} 
+Description: This package installs the default version
+ This is a metapackage containing the default version
+
+Package: libsdurw-math-dev
+Section: misc
+Priority: optional
+Architecture: amd64
+Depends: 
+ libsdurw-math1.2-dev,
+ ${misc:Depends} 
+Description: This package installs the default version
+ This is a metapackage containing the default version
+
+Package: libsdurw-algorithms-dev
+Section: misc
+Priority: optional
+Architecture: amd64
+Depends: 
+ libsdurw-algorithms1.2-dev,
+ ${misc:Depends} 
+Description: This package installs the default version
+ This is a metapackage containing the default version
+
+Package: libsdurw-calibration-dev
+Section: misc
+Priority: optional
+Architecture: amd64
+Depends: 
+ libsdurw-calibration1.2-dev,
+ ${misc:Depends} 
+Description: This package installs the default version
+ This is a metapackage containing the default version
+
+Package: libsdurw-control-dev
+Section: misc
+Priority: optional
+Architecture: amd64
+Depends: 
+ libsdurw-control1.2-dev,
+ ${misc:Depends} 
+Description: This package installs the default version
+ This is a metapackage containing the default version
+
+Package: libsdurw-opengl-dev
+Section: misc
+Priority: optional
+Architecture: amd64
+Depends: 
+ libsdurw-opengl1.2-dev,
+ ${misc:Depends} 
+Description: This package installs the default version
+ This is a metapackage containing the default version
+
+Package: libsdurw-proximitystrategies-dev
+Section: misc
+Priority: optional
+Architecture: amd64
+Depends: 
+ libsdurw-proximitystrategies1.2-dev,
+ ${misc:Depends} 
+Description: This package installs the default version
+ This is a metapackage containing the default version
+
+Package: libsdurw-pathoptimization-dev
+Section: misc
+Priority: optional
+Architecture: amd64
+Depends: 
+ libsdurw-pathoptimization1.2-dev,
+ ${misc:Depends} 
+Description: This package installs the default version
+ This is a metapackage containing the default version
+
+Package: libsdurw-pathplanners-dev
+Section: misc
+Priority: optional
+Architecture: amd64
+Depends: 
+ libsdurw-pathplanners1.2-dev,
+ ${misc:Depends} 
+Description: This package installs the default version
+ This is a metapackage containing the default version
+
+Package: libsdurw-task-dev
+Section: misc
+Priority: optional
+Architecture: amd64
+Depends: 
+ libsdurw-task1.2-dev,
+ ${misc:Depends} 
+Description: This package installs the default version
+ This is a metapackage containing the default version
+
+Package: libsdurw-simulation-dev
+Section: misc
+Priority: optional
+Architecture: amd64
+Depends: 
+ libsdurw-simulation1.2-dev,
+ ${misc:Depends} 
+Description: This package installs the default version
+ This is a metapackage containing the default version
+
+Package: libsdurw-assembly-dev
+Section: misc
+Priority: optional
+Architecture: amd64
+Depends: 
+ libsdurw-assembly1.2-dev,
+ ${misc:Depends} 
+Description: This package installs the default version
+ This is a metapackage containing the default version
+
+Package: libsdurw-csg-dev
+Section: misc
+Priority: optional
+Architecture: amd64
+Depends: 
+ libsdurw-csg1.2-dev,
+ ${misc:Depends} 
+Description: This package installs the default version
+ This is a metapackage containing the default version
+
+Package: libsdurw-geometry-dev
+Section: misc
+Priority: optional
+Architecture: amd64
+Depends: 
+ libsdurw-geometry1.2-dev,
+ ${misc:Depends} 
+Description: This package installs the default version
+ This is a metapackage containing the default version
+
+Package: sdurws-cmake
+Section: misc
+Priority: optional
+Architecture: amd64
+Depends: 
+ sdurws-cmake1.2,
+ ${misc:Depends} 
+Description: This package installs the default version
+ This is a metapackage containing the default version
+
+Package: libsdurws-dev
+Section: misc
+Priority: optional
+Architecture: amd64
+Depends: 
+ libsdurws1.2-dev,
+ ${misc:Depends} 
+Description: This package installs the default version
+ This is a metapackage containing the default version
+
+Package: libsdurws-atask-dev
+Section: misc
+Priority: optional
+Architecture: amd64
+Depends: 
+ libsdurws-atask1.2-dev,
+ ${misc:Depends} 
+Description: This package installs the default version
+ This is a metapackage containing the default version
+
+Package: libsdurws-gtask-dev
+Section: misc
+Priority: optional
+Architecture: amd64
+Depends: 
+ libsdurws-gtask1.2-dev,
+ ${misc:Depends} 
+Description: This package installs the default version
+ This is a metapackage containing the default version
+
+Package: libsdurws-jog-dev
+Section: misc
+Priority: optional
+Architecture: amd64
+Depends: 
+ libsdurws-jog1.2-dev,
+ ${misc:Depends} 
+Description: This package installs the default version
+ This is a metapackage containing the default version
+
+Package: libsdurws-log-dev
+Section: misc
+Priority: optional
+Architecture: amd64
+Depends: 
+ libsdurws-log1.2-dev,
+ ${misc:Depends} 
+Description: This package installs the default version
+ This is a metapackage containing the default version
+
+
+Package: libsdurws-luapl-dev
+Section: misc
+Priority: optional
+Architecture: amd64
+Depends: 
+ libsdurws-luapl1.2-dev,
+ ${misc:Depends} 
+Description: This package installs the default version
+ This is a metapackage containing the default version
+
+Package: libsdurws-luaeditor-dev
+Section: misc
+Priority: optional
+Architecture: amd64
+Depends: 
+ libsdurws-luaeditor1.2-dev,
+ ${misc:Depends} 
+Description: This package installs the default version
+ This is a metapackage containing the default version
+
+Package: libsdurws-planning-dev
+Section: misc
+Priority: optional
+Architecture: amd64
+Depends: 
+ libsdurws-planning1.2-dev,
+ ${misc:Depends} 
+Description: This package installs the default version
+ This is a metapackage containing the default version
+
+Package: libsdurws-playback-dev
+Section: misc
+Priority: optional
+Architecture: amd64
+Depends: 
+ libsdurws-playback1.2-dev,
+ ${misc:Depends} 
+Description: This package installs the default version
+ This is a metapackage containing the default version
+
+Package: libsdurws-propertyview-dev
+Section: misc
+Priority: optional
+Architecture: amd64
+Depends: 
+ libsdurws-propertyview1.2-dev,
+ ${misc:Depends} 
+Description: This package installs the default version
+ This is a metapackage containing the default version
+
+Package: libsdurws-sensors-dev
+Section: misc
+Priority: optional
+Architecture: amd64
+Depends: 
+ libsdurws-sensors1.2-dev,
+ ${misc:Depends} 
+Description: This package installs the default version
+ This is a metapackage containing the default version
+
+Package: libsdurws-treeview-dev
+Section: misc
+Priority: optional
+Architecture: amd64
+Depends: 
+ libsdurws-treeview1.2-dev,
+ ${misc:Depends} 
+Description: This package installs the default version
+ This is a metapackage containing the default version
+
+Package: libsdurws-workcelleditorplugin-dev
+Section: misc
+Priority: optional
+Architecture: amd64
+Depends: 
+ libsdurws-workcelleditorplugin1.2-dev,
+ ${misc:Depends} 
+Description: This package installs the default version
+ This is a metapackage containing the default version
+
+Package: libsdurws-workcelleditor-dev
+Section: misc
+Priority: optional
+Architecture: amd64
+Depends: 
+ libsdurws-workcelleditor1.2-dev,
+ ${misc:Depends} 
+Description: This package installs the default version
+ This is a metapackage containing the default version
+
+Package: libsdurws-robworkstudioapp-dev
+Section: misc
+Priority: optional
+Architecture: amd64
+Depends: 
+ libsdurws-robworkstudioapp1.2-dev,
+ ${misc:Depends} 
+Description: This package installs the default version
+ This is a metapackage containing the default version
+
+Package: sdurwsim-cmake
+Section: misc
+Priority: optional
+Architecture: amd64
+Depends: 
+ sdurwsim-cmake1.2,
+ ${misc:Depends} 
+Description: This package installs the default version
+ This is a metapackage containing the default version
+
+Package: libsdurwsim-dev
+Section: misc
+Priority: optional
+Architecture: amd64
+Depends: 
+ libsdurwsim1.2-dev,
+ ${misc:Depends} 
+Description: This package installs the default version
+ This is a metapackage containing the default version
+
+Package: libsdurwsim-bullet-dev
+Section: misc
+Priority: optional
+Architecture: amd64
+Depends: 
+ libsdurwsim-bullet1.2-dev,
+ ${misc:Depends} 
+Description: This package installs the default version
+ This is a metapackage containing the default version
+
+Package: libsdurwsim-ode-dev
+Section: misc
+Priority: optional
+Architecture: amd64
+Depends: 
+ libsdurwsim-ode1.2-dev,
+ ${misc:Depends} 
+Description: This package installs the default version
+ This is a metapackage containing the default version
+
+Package: libsdurwsim-gui-dev
+Section: misc
+Priority: optional
+Architecture: amd64
+Depends: 
+ libsdurwsim-gui1.2-dev,
+ ${misc:Depends} 
+Description: This package installs the default version
+ This is a metapackage containing the default version
+
+Package: python3-sdurw
+Section: misc
+Priority: optional
+Architecture: amd64
+Depends: 
+ python3-sdurw1.2,
+ ${misc:Depends} 
+Description: This package installs the default version
+ This is a metapackage containing the default version
+
+Package: python3-sdurw-core
+Section: misc
+Priority: optional
+Architecture: amd64
+Depends: 
+ python3-sdurw-core1.2,
+ ${misc:Depends} 
+Description: This package installs the default version
+ This is a metapackage containing the default version
+
+Package: python3-sdurw-common
+Section: misc
+Priority: optional
+Architecture: amd64
+Depends: 
+ python3-sdurw-common1.2,
+ ${misc:Depends} 
+Description: This package installs the default version
+ This is a metapackage containing the default version
+
+Package: python3-sdurw-control
+Section: misc
+Priority: optional
+Architecture: amd64
+Depends: 
+ python3-sdurw-control1.2,
+ ${misc:Depends} 
+Description: This package installs the default version
+ This is a metapackage containing the default version
+
+Package: python3-sdurw-opengl
+Section: misc
+Priority: optional
+Architecture: amd64
+Depends: 
+ python3-sdurw-opengl1.2,
+ ${misc:Depends} 
+Description: This package installs the default version
+ This is a metapackage containing the default version
+
+Package: python3-sdurw-proximitystrategies
+Section: misc
+Priority: optional
+Architecture: amd64
+Depends: 
+ python3-sdurw-proximitystrategies1.2,
+ ${misc:Depends} 
+Description: This package installs the default version
+ This is a metapackage containing the default version
+
+Package: python3-sdurw-pathoptimization
+Section: misc
+Priority: optional
+Architecture: amd64
+Depends: 
+ python3-sdurw-pathoptimization1.2,
+ ${misc:Depends} 
+Description: This package installs the default version
+ This is a metapackage containing the default version
+
+Package: python3-sdurw-pathplanners
+Section: misc
+Priority: optional
+Architecture: amd64
+Depends: 
+ python3-sdurw-pathplanners1.2,
+ ${misc:Depends} 
+Description: This package installs the default version
+ This is a metapackage containing the default version
+
+Package: python3-sdurw-task
+Section: misc
+Priority: optional
+Architecture: amd64
+Depends: 
+ python3-sdurw-task1.2,
+ ${misc:Depends} 
+Description: This package installs the default version
+ This is a metapackage containing the default version
+
+Package: python3-sdurw-assembly
+Section: misc
+Priority: optional
+Architecture: amd64
+Depends: 
+ python3-sdurw-assembly1.2,
+ ${misc:Depends} 
+Description: This package installs the default version
+ This is a metapackage containing the default version
+
+Package: python3-sdurws
+Section: misc
+Priority: optional
+Architecture: amd64
+Depends: 
+ python3-sdurws1.2,
+ ${misc:Depends} 
+Description: This package installs the default version
+ This is a metapackage containing the default version
+
+Package: python3-sdurwsim
+Section: misc
+Priority: optional
+Architecture: amd64
+Depends: 
+ python3-sdurwsim1.2,
+ ${misc:Depends} 
+Description: This package installs the default version
+ This is a metapackage containing the default version
+
+Package: lua-sdurw
+Section: misc
+Priority: optional
+Architecture: amd64
+Depends: 
+ lua-sdurw1.2,
+ ${misc:Depends} 
+Description: This package installs the default version
+ This is a metapackage containing the default version
+
+Package: lua-sdurw-core
+Section: misc
+Priority: optional
+Architecture: amd64
+Depends: 
+ lua-sdurw-core1.2,
+ ${misc:Depends} 
+Description: This package installs the default version
+ This is a metapackage containing the default version
+
+Package: lua-sdurw-common
+Section: misc
+Priority: optional
+Architecture: amd64
+Depends: 
+ lua-sdurw-common1.2,
+ ${misc:Depends} 
+Description: This package installs the default version
+ This is a metapackage containing the default version
+
+Package: lua-sdurw-control
+Section: misc
+Priority: optional
+Architecture: amd64
+Depends: 
+ lua-sdurw-control1.2,
+ ${misc:Depends} 
+Description: This package installs the default version
+ This is a metapackage containing the default version
+
+Package: lua-sdurw-opengl
+Section: misc
+Priority: optional
+Architecture: amd64
+Depends: 
+ lua-sdurw-opengl1.2,
+ ${misc:Depends} 
+Description: This package installs the default version
+ This is a metapackage containing the default version
+
+Package: lua-sdurw-proximitystrategies
+Section: misc
+Priority: optional
+Architecture: amd64
+Depends: 
+ lua-sdurw-proximitystrategies1.2,
+ ${misc:Depends} 
+Description: This package installs the default version
+ This is a metapackage containing the default version
+
+Package: lua-sdurw-pathoptimization
+Section: misc
+Priority: optional
+Architecture: amd64
+Depends: 
+ lua-sdurw-pathoptimization1.2,
+ ${misc:Depends} 
+Description: This package installs the default version
+ This is a metapackage containing the default version
+
+Package: lua-sdurw-pathplanners
+Section: misc
+Priority: optional
+Architecture: amd64
+Depends: 
+ lua-sdurw-pathplanners1.2,
+ ${misc:Depends} 
+Description: This package installs the default version
+ This is a metapackage containing the default version
+
+Package: lua-sdurw-task
+Section: misc
+Priority: optional
+Architecture: amd64
+Depends: 
+ lua-sdurw-task1.2,
+ ${misc:Depends} 
+Description: This package installs the default version
+ This is a metapackage containing the default version
+
+Package: lua-sdurw-assembly
+Section: misc
+Priority: optional
+Architecture: amd64
+Depends: 
+ lua-sdurw-assembly1.2,
+ ${misc:Depends} 
+Description: This package installs the default version
+ This is a metapackage containing the default version
+
+Package: lua-sdurws
+Section: misc
+Priority: optional
+Architecture: amd64
+Depends: 
+ lua-sdurws1.2,
+ ${misc:Depends} 
+Description: This package installs the default version
+ This is a metapackage containing the default version
+
+Package: lua-sdurwsim
+Section: misc
+Priority: optional
+Architecture: amd64
+Depends: 
+ lua-sdurwsim1.2,
+ ${misc:Depends} 
+Description: This package installs the default version
+ This is a metapackage containing the default version
+
+Package: python3-robwork-all
+Section: misc
+Priority: optional
+Architecture: amd64
+Depends: 
+ python3-robwork1.2-all,
+ ${misc:Depends} 
+Description: This package installs the default version
+ This is a metapackage containing the default version
+
+Package: lua-robwork-all
+Section: misc
+Priority: optional
+Architecture: amd64
+Depends: 
+ lua-robwork1.2-all,
+ ${misc:Depends} 
+Description: This package installs the default version
+ This is a metapackage containing the default version
+
+Package: libsdurw-all
+Section: misc
+Priority: optional
+Architecture: amd64
+Depends: 
+ libsdurw1.2-all,
+ ${misc:Depends} 
+Description: This package installes all libraries related to the sdurw
+ This is a metapackage containing the default version of libsdurw-all-dev
+
+Package: libsdurws-all
+Section: misc
+Priority: optional
+Architecture: amd64
+Depends: 
+ libsdurws1.2-all,
+ ${misc:Depends} 
+Description: This package installes all libraries related to the sdurws
+ This is a metapackage containing the default version of libsdurws-all-dev
+
+Package: libsdurwsim-all
+Section: misc
+Priority: optional
+Architecture: amd64
+Depends: 
+ libsdurwsim1.2-all-dev,
+ ${misc:Depends} 
+Description: This package installes all libraries related to the sdurws
+ This is a metapackage containing the default version of libsdurwsim-all-dev
+
+Package: libsdurwhw-all
+Section: misc
+Priority: optional
+Architecture: amd64
+Depends: 
+ libsdurwhw1.2-all,
+ ${misc:Depends} 
+Description: This package installes all libraries related to the sdurwhw
+ This is a metapackage containing the default version of libsdurwhw-all-dev
+
+Package: libsdurw-all-dev
+Section: misc
+Priority: optional
+Architecture: amd64
+Depends: 
+ sdurw-cmake (=${binary:Version}), 
+ libsdurw-core-dev (=${binary:Version}), 
+ libsdurw-common-dev (=${binary:Version}), 
+ libsdurw-math-dev (=${binary:Version}), 
+ libsdurw-dev (=${binary:Version}), 
+ libsdurw-algorithms-dev (=${binary:Version}), 
+ libsdurw-calibration-dev (=${binary:Version}), 
+ libsdurw-control-dev (=${binary:Version}), 
+ libsdurw-opengl-dev (=${binary:Version}), 
+ libsdurw-proximitystrategies-dev (=${binary:Version}), 
+ libsdurw-pathoptimization-dev (=${binary:Version}), 
+ libsdurw-pathplanners-dev (=${binary:Version}), 
+ libsdurw-task-dev (=${binary:Version}), 
+ libsdurw-simulation-dev (=${binary:Version}), 
+ libsdurw-assembly-dev (=${binary:Version}), 
+ libsdurw-csg-dev (=${binary:Version}), 
+ libsdurw-geometry-dev (=${binary:Version}), 
+ ${misc:Depends} 
+Description: This package installes all libraries related to the sdurw
+ This is a metapackage containing the default version of libsdurw-all-dev
+
+Package: libsdurws-all-dev
+Section: misc
+Priority: optional
+Architecture: amd64
+Depends: 
+ sdurws-cmake (=${binary:Version}), 
+ libsdurws-dev (=${binary:Version}), 
+ robworkstudio,
+ libsdurws-robworkstudioapp-dev (=${binary:Version}), 
+ libsdurws-atask-dev (=${binary:Version}), 
+ libsdurws-gtask-dev (=${binary:Version}), 
+ libsdurws-jog-dev (=${binary:Version}), 
+ libsdurws-log-dev (=${binary:Version}), 
+ libsdurws-luapl-dev (=${binary:Version}), 
+ libsdurws-luaeditor-dev (=${binary:Version}), 
+ libsdurws-planning-dev (=${binary:Version}), 
+ libsdurws-playback-dev (=${binary:Version}), 
+ libsdurws-propertyview-dev (=${binary:Version}), 
+ libsdurws-sensors-dev (=${binary:Version}), 
+ libsdurws-treeview-dev (=${binary:Version}), 
+ libsdurws-workcelleditorplugin-dev (=${binary:Version}), 
+ libsdurws-workcelleditor-dev (=${binary:Version}), 
+ ${misc:Depends} 
+Description: This package installes all libraries related to the sdurws
+ This is a metapackage containing the default version of libsdurws-all-dev
+
+Package: libsdurwsim-all-dev
+Section: misc
+Priority: optional
+Architecture: amd64
+Depends: 
+ sdurwsim-cmake (=${binary:Version}), 
+ libsdurwsim-dev (=${binary:Version}), 
+ libsdurwsim-bullet-dev (=${binary:Version}), 
+ libsdurwsim-ode-dev (=${binary:Version}), 
+ libsdurwsim-gui-dev (=${binary:Version}), 
+ ${misc:Depends} 
+Description: This package installes all libraries related to the sdurws
+ This is a metapackage containing the default version of libsdurwsim-all-dev
+
+Package: libsdurwhw-all-dev
+Section: misc
+Priority: optional
+Architecture: amd64
+Depends: 
+ libsdurwhw1.2-all-dev,
+ ${misc:Depends} 
+Description: This package installes all libraries related to the sdurwhw
+ This is a metapackage containing the default version of libsdurwhw-all-dev

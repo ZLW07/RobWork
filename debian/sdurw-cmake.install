@@ -1,0 +1,11 @@
+usr/share/robwork-*/cmake/RobWorkConfigVersion.cmake
+usr/share/robwork-*/cmake/RobWorkConfig.cmake
+usr/share/robwork-*/cmake/RobWorkTargets.cmake
+usr/share/robwork-*/cmake/RobWorkTargets-none.cmake
+usr/share/robwork-*/cmake/RobWorkMacros.cmake
+usr/share/robwork-*/cmake/RobWorkConfigMacros.cmake
+usr/share/robwork-*/cmake/RobWorkBuildConfig_none.cmake
+usr/share/robwork-*/cmake/Modules/*
+usr/share/robwork-*/LICENSE.txt
+usr/share/robwork-*/NOTICE.txt
+

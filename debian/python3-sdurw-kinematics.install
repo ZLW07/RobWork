@@ -1,0 +1,3 @@
+usr/lib/*/dist-packages/sdurw_kinematics/sdurw_kinematics.py
+usr/lib/*/dist-packages/sdurw_kinematics/_sdurw_kinematics*.so
+usr/lib/*/dist-packages/sdurw_kinematics/__init__.py

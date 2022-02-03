@@ -1,0 +1,14 @@
+usr/lib/*/dist-packages/sdurw_plugin/*
+usr/lib/*/dist-packages/sdurw_proximity/*
+usr/lib/*/dist-packages/sdurw_graphics/*
+usr/lib/*/dist-packages/sdurw_trajectory/*
+usr/lib/*/dist-packages/sdurw_invkin/*
+usr/lib/*/dist-packages/sdurw_pathplanning/*
+usr/lib/*/dist-packages/sdurw_loaders/*
+usr/lib/*/dist-packages/sdurw_algorithms/*
+usr/lib/*/dist-packages/sdurw/sdurw.py
+usr/lib/*/dist-packages/sdurw/_sdurw*.so
+usr/lib/*/dist-packages/sdurw/__init__.py
+usr/lib/*/dist-packages/RobWork-*.egg-info
+usr/share/robwork-*/cmake/RobWorkpythonTargets.cmake
+usr/share/robwork-*/cmake/RobWorkpythonTargets-none.cmake

@@ -1,0 +1,3 @@
+usr/lib/*/dist-packages/sdurw_sensor/sdurw_sensor.py
+usr/lib/*/dist-packages/sdurw_sensor/_sdurw_sensor*.so
+usr/lib/*/dist-packages/sdurw_sensor/__init__.py

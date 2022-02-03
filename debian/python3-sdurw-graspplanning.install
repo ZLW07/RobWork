@@ -1,0 +1,3 @@
+usr/lib/*/dist-packages/sdurw_graspplanning/sdurw_graspplanning.py
+usr/lib/*/dist-packages/sdurw_graspplanning/_sdurw_graspplanning*.so
+usr/lib/*/dist-packages/sdurw_graspplanning/__init__.py

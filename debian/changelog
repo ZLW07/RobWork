@@ -1,0 +1,1471 @@
+robwork (2.1.0-1) focal; urgency=medium
+
+  [ Kasper Høj Lorenzen ]
+  * Fixing cmake error for export files (ubuntu 16 ubuntu 18)
+  * added home btn RWS
+  * Mac examples working
+  * fixing DoubleSpinbox errors
+  * make ready for Windows installer and reduced dependency fix
+  * Many minor issues for ubuntu 18 and ubuntu 16
+  * Changed zoom
+  * EOL TUL
+  * fixing Debian errors
+  * Update BSphere
+  * fixing segfault
+  * Fixed setTimedStatePath
+  * ubuntu 16 UIC problem
+  * Fixing missing QThread create
+  * windows qhull gtest error
+  * Mac gtest fix
+  * Unfinished distance calculation class
+  * Initial setup
+  * fixing errors and upgrading Rotation3D
+
+  [ Thomas Nicky Thulesen ]
+  * Added rwsimlibs/test library and fixed various errors in debian packaging.
+
+  [ Kasper Høj Lorenzen ]
+  * EOL ubuntu 1604
+  * None error
+  * Swig update
+  * fixing errors and upgrading Rotation3D
+  * Hunter pkg management
+  * Automatic documentation uploade
+  * Fcl Distance MultiStrategy
+  * Graspplanning in new swig system
+  * Ubuntu 18 and windows fixes
+  * fixed Hunter problem
+  * added missin python packages
+  * added more missing packages
+
+ -- Kasper Høj Lorenzen <kalor@mmmi.sdu.dk>  Wed, 09 Jun 2021 13:48:31 +0200
+
+robwork (2.0.0-1) focal; urgency=medium
+
+  * Version number updated to 2.0.0-1
+
+ -- Kasper Høj Lorenzen <kalor@mmmi.sdu.dk>  Wed, 06 Jan 2021 13:33:05 +0100
+
+robwork1.2 (1.2.11-3) focal; urgency=medium
+
+  * Fixing package conflicts
+  * fixed duplicate field
+  * Version number updated to 1.2.11-3
+
+ -- Kasper Høj Lorenzen <kalor@mmmi.sdu.dk>  Mon, 07 Dec 2020 13:32:14 +0100
+
+robwork1.2 (1.2.11-2) bionic; urgency=medium
+
+  * Version number updated to 1.2.11-2
+
+ -- Kasper Høj Lorenzen <kalor@mmmi.sdu.dk>  Fri, 27 Nov 2020 09:14:46 +0100
+
+robwork1.2 (1.2.11-1) focal; urgency=medium
+
+  * Version number updated to 1.2.11-1
+
+ -- Kasper Høj Lorenzen <kalor@mmmi.sdu.dk>  Fri, 27 Nov 2020 09:13:45 +0100
+
+robwork1.2 (1.2.10-4) focal; urgency=medium
+
+  * Version number updated to 1.2.10-4
+
+ -- Kasper Høj Lorenzen <kalor@mmmi.sdu.dk>  Thu, 26 Nov 2020 14:44:41 +0100
+
+robwork1.2 (1.2.10-3) bionic; urgency=medium
+
+  * fixed missing binarys
+  * Version number updated to 1.2.10-3
+
+ -- Kasper Høj Lorenzen <kalor@mmmi.sdu.dk>  Thu, 26 Nov 2020 14:43:41 +0100
+
+robwork1.2 (1.2.10-2) focal; urgency=medium
+
+  * Version number updated to 1.2.10-2
+
+ -- Kasper Høj Lorenzen <kalor@mmmi.sdu.dk>  Thu, 26 Nov 2020 12:29:27 +0100
+
+robwork1.2 (1.2.10-1) bionic; urgency=medium
+
+  * Fixing more conflicts
+  * mitigating parabolic blend problem
+  * Version number updated to 1.2.10-1
+
+ -- Kasper Høj Lorenzen <kalor@mmmi.sdu.dk>  Thu, 26 Nov 2020 12:28:05 +0100
+
+robwork1.2 (1.2.9-4) bionic; urgency=medium
+
+  * Version number updated to 1.2.9-4
+
+ -- Kasper Høj Lorenzen <kalor@mmmi.sdu.dk>  Wed, 25 Nov 2020 15:31:55 +0100
+
+robwork1.2 (1.2.9-3) focal; urgency=medium
+
+  * more conflicts
+  * Version number updated to 1.2.9-3
+
+ -- Kasper Høj Lorenzen <kalor@mmmi.sdu.dk>  Wed, 25 Nov 2020 15:29:46 +0100
+
+robwork1.2 (1.2.9-2) bionic; urgency=medium
+
+  * Version number updated to 1.2.9-2
+
+ -- Kasper Høj Lorenzen <kalor@mmmi.sdu.dk>  Tue, 24 Nov 2020 16:23:48 +0100
+
+robwork1.2 (1.2.9-1) focal; urgency=medium
+
+  * fixes to pkg conflicts
+  * changed conflict version
+  * more conflict pkg fixes
+  * Version number updated to 1.2.9-1
+
+ -- Kasper Høj Lorenzen <kalor@mmmi.sdu.dk>  Tue, 24 Nov 2020 16:21:58 +0100
+
+robwork1.2 (1.2.8-1) focal; urgency=medium
+
+  * all-dev packages point to internal dev metapackages
+  * added metapackages
+  * Version number updated to 1.2.8-1
+
+ -- Kasper Høj Lorenzen <kalor@mmmi.sdu.dk>  Fri, 13 Nov 2020 11:05:01 +0100
+
+robwork1.2 (1.2.7-2) focal; urgency=medium
+
+  * fixed package naming
+  * upgraded version of default package
+  * Version number updated to 1.2.7-2
+
+ -- Kasper Høj Lorenzen <kalor@mmmi.sdu.dk>  Thu, 12 Nov 2020 08:45:01 +0100
+
+robwork1.2 (1.2.7-1) focal; urgency=medium
+
+  * Moved to new package versioning system
+  * Version number updated to 1.2.7-1
+
+ -- Kasper Høj Lorenzen <kalor@mmmi.sdu.dk>  Wed, 11 Nov 2020 15:31:15 +0100
+
+robwork1.2 (1.2.6-1) focal; urgency=medium
+
+  * Version number updated to 1.2.6-1
+
+ -- Kasper Høj Lorenzen <kalor@mmmi.sdu.dk>  Fri, 23 Oct 2020 14:04:33 +0200
+
+robwork1.2 (1.2.4-4) focal; urgency=medium
+
+  * Version number updated to 1.2.4-4
+
+ -- Kasper Høj Lorenzen <kalor@mmmi.sdu.dk>  Fri, 23 Oct 2020 12:39:43 +0200
+
+robwork1.2 (1.2.4-3) focal; urgency=medium
+
+  * testing new source system
+  * Added default debian-pkg folder
+  * Version number updated to 1.2.4-3
+
+ -- Kasper Høj Lorenzen <kalor@mmmi.sdu.dk>  Fri, 23 Oct 2020 12:37:59 +0200
+
+robwork1.2 (1.2.4-2) bionic; urgency=medium
+
+  * Version number updated to 1.2.4-2
+
+ -- Kasper Høj Lorenzen <kalor@mmmi.sdu.dk>  Thu, 22 Oct 2020 14:18:03 +0200
+
+robwork (1.2.4-1) focal; urgency=medium
+
+  * update QSampler pointer type
+  * rws fixes for getting rws in studio
+  * Version number updated to 1.2.4-1
+
+ -- Kasper Høj Lorenzen <kalor@mmmi.sdu.dk>  Thu, 22 Oct 2020 14:16:13 +0200
+
+robwork (1.2.2-4) bionic; urgency=medium
+
+  * Version number updated to 1.2.2-4
+
+ -- Kasper Høj Lorenzen <kalor@mmmi.sdu.dk>  Thu, 08 Oct 2020 10:06:24 +0200
+
+robwork (1.2.2-3) focal; urgency=medium
+
+  * Added preinstall script finding ur_rtde
+  * Version number updated to 1.2.2-3
+
+ -- Kasper Høj Lorenzen <kalor@mmmi.sdu.dk>  Thu, 08 Oct 2020 10:05:15 +0200
+
+robwork (1.2.2-2) bionic; urgency=medium
+
+  * Version number updated to 1.2.2-2
+
+ -- Kasper Høj Lorenzen <kalor@mmmi.sdu.dk>  Thu, 01 Oct 2020 15:13:49 +0200
+
+robwork (1.2.2-1) focal; urgency=medium
+
+  * re-enabled rtde
+  * Ubuntu 18 and 20 compile problem fixes
+  * ur_rtde compile problem ubuntu 16
+  * Centos and ubuntu 16 bullet probelm
+  * solving upgrade problems
+  * Version number updated to 1.2.2-1
+
+ -- Kasper Høj Lorenzen <kalor@mmmi.sdu.dk>  Thu, 01 Oct 2020 15:09:57 +0200
+
+robwork (1.2.1-2) bionic; urgency=medium
+
+  * Version number updated to 1.2.1-2
+
+ -- Kasper Høj Lorenzen <kalor@mmmi.sdu.dk>  Mon, 28 Sep 2020 13:53:04 +0200
+
+robwork (1.2.1-1) focal; urgency=medium
+
+  [ Thomas Nicky Thulesen ]
+  * Disabling default build of SWIG interfaces.
+
+  [ Kasper Høj Lorenzen ]
+  * don't version boost when updating rw version
+  * rws python plugin loading
+  * fixed rwsim link problem
+  * fixed rwhw missing function
+  * added missing demendencies in control file
+  * removed ur_rtde cmake files
+  * fixed opengl dependency
+  * added sdurw common python and lua package
+  * disable building rtde
+  * Version number updated to 1.2.1-1
+
+ -- Kasper Høj Lorenzen <kalor@mmmi.sdu.dk>  Mon, 28 Sep 2020 13:48:58 +0200
+
+robwork (1.1.12-1) focal; urgency=medium
+
+  * rws centos7 and ubuntu16 QCodeEditor error fixes
+  * Eigen to Numpy
+  * Numpy missing ubuntu16
+  * fixed link problem
+  * setting Boost_INCLUDE_DIR for ci
+  * Python Ptr comparisons
+  * Swig rw common header
+  * added extra dependencies for dev packages
+  * added more dependencies and build rules
+  * added format files
+  * simplified cmake java
+  * Update devel branch with changes to master
+  * Version number updated to 1.1.12-1
+
+ -- Kasper Høj Lorenzen <kalor@mmmi.sdu.dk>  Wed, 23 Sep 2020 14:54:12 +0200
+
+robwork (1.1.11-2) bionic; urgency=medium
+
+  * Version number updated to 1.1.11-2
+
+ -- Kasper Høj Lorenzen <kalor@mmmi.sdu.dk>  Fri, 28 Aug 2020 12:26:25 +0200
+
+robwork (1.1.11-1) focal; urgency=medium
+
+  * Matrix operator python
+  * Version number updated to 1.1.11-1
+
+ -- Kasper Høj Lorenzen <kalor@mmmi.sdu.dk>  Fri, 28 Aug 2020 12:23:03 +0200
+
+robwork (1.1.10-1) focal; urgency=medium
+
+  [ Thomas Nicky Thulesen ]
+  * Fixed the math macros after switching to MathJax. Removed deprecated doc/installstuff and old unused/duplicated Doxygen files.
+
+  [ Kasper Høj Lorenzen ]
+  * Rotation3D inverse copy
+  * Windows ci vc2019
+  * Robwork math vector3d
+  * Robwork math eaa
+  * Fixed rw version
+  * updated rules to include version
+  * Aliased math types
+  * Parabolic blend
+  * Rws python codeeditor
+  * Collision calculator update
+  * Changed CI pipline
+  * Changed cmake settings in rule to match current names
+  * Swig header core
+  * removed install of deleted changelog
+  * Romoved --parallel arg as it iis unnessesary
+  * Fixed Matrix acces
+  * added sdurw-core interface packages
+  * Version number updated to 1.1.10-1
+
+ -- Kasper Høj Lorenzen <kalor@mmmi.sdu.dk>  Fri, 28 Aug 2020 12:17:56 +0200
+
+robwork (1.1.9-2) xenial; urgency=medium
+
+  * Disabeling FCL for xenail build
+  * Version number updated to 1.1.9-2
+
+ -- Kasper Høj Lorenzen <kalor@mmmi.sdu.dk>  Fri, 31 Jul 2020 10:59:54 +0200
+
+robwork (1.1.9-1) xenial; urgency=medium
+
+  * fixed more sdurw_lua link errors
+  * Version number updated to 1.1.9-1
+
+ -- Kasper Høj Lorenzen <kalor@mmmi.sdu.dk>  Fri, 31 Jul 2020 10:40:58 +0200
+
+robwork (1.1.8-1) xenial; urgency=medium
+
+  * fixed more RW::sdurw_lua link errors
+  * Version number updated to 1.1.8-1
+
+ -- Kasper Høj Lorenzen <kalor@mmmi.sdu.dk>  Fri, 31 Jul 2020 10:15:26 +0200
+
+robwork (1.1.7-2) xenial; urgency=medium
+
+  * Version number updated to 1.1.7-2
+
+ -- Kasper Høj Lorenzen <kalor@mmmi.sdu.dk>  Fri, 31 Jul 2020 10:07:05 +0200
+
+robwork (1.1.7-1) focal; urgency=medium
+
+  * Priximity calculator error fix
+  * Rws zoom
+  * Rws transparent issue
+  * Triangle conversion
+  * Static ccd. using libccd v2.1
+  * Robwork math vector nd
+  * Swig from headers
+  * Robwork math rotation3d
+  * Pipline devel
+  * fixed linking error for sdurws_lua
+  * Version number updated to 1.1.7-1
+
+ -- Kasper Høj Lorenzen <kalor@mmmi.sdu.dk>  Fri, 31 Jul 2020 09:54:33 +0200
+
+robwork (1.1.6-3) xenial; urgency=medium
+
+  * temp changes for xenial release
+  * Version number updated to 1.1.6-3
+
+ -- Kasper Høj Lorenzen <kalor@mmmi.sdu.dk>  Fri, 31 Jul 2020 08:20:37 +0200
+
+robwork (1.1.6-2) bionic; urgency=medium
+
+  * Version number updated to 1.1.6-2
+
+ -- Kasper Høj Lorenzen <kalor@mmmi.sdu.dk>  Thu, 23 Jul 2020 15:16:29 +0200
+
+robwork (1.1.6-1) focal; urgency=medium
+
+  * Transform3d cubic spline
+  * Rws load plugins
+  * Mac fcl linking update
+  * Findfcl update
+  * Tmp rws windows fix
+  * remove swig warnings in robwork
+  * MoveableFrame::moveTo for DAF frames
+  * Math seed, seeds rand
+  * Cmake swig error fix
+  * Quaternion squad
+  * Rws remove framelabel
+  * Documentation on the CSV path format
+  * Proximitycalculator
+  * removed comments and updated copyright dates
+  * updated the how to sheet
+  * Version number updated to 1.1.6-1
+
+ -- Kasper Høj Lorenzen <kalor@mmmi.sdu.dk>  Thu, 23 Jul 2020 15:08:33 +0200
+
+robwork (1.1.5-2) bionic; urgency=medium
+
+  * Version number updated to 1.1.5-2
+
+ -- Kasper Høj Lorenzen <kalor@mmmi.sdu.dk>  Thu, 04 Jun 2020 09:23:40 +0200
+
+robwork (1.1.5-1) focal; urgency=medium
+
+  * removed compilation of java wrappers
+  * Swig even less memmory
+  * Version number updated to 1.1.5-1
+
+ -- Kasper Høj Lorenzen <kalor@mmmi.sdu.dk>  Wed, 03 Jun 2020 15:10:26 +0200
+
+robwork (1.1.4-1) focal; urgency=medium
+
+  * Swig warnings
+  * Swig less memory
+  * Swig cmake install errors
+  * ppa availability doc
+  * Fixed tagging
+  * Version number updated to 1.1.4-1
+
+ -- Kasper Høj Lorenzen <kalor@mmmi.sdu.dk>  Wed, 03 Jun 2020 09:00:12 +0200
+
+robwork (1.1.3-2) bionic; urgency=medium
+
+  * Version number updated to 1.1.3-2
+
+ -- Kasper Høj Lorenzen <kalor@mmmi.sdu.dk>  Wed, 27 May 2020 10:50:21 +0200
+
+robwork (1.1.3-1) focal; urgency=medium
+
+  [ Kasper Høj Lorenzen ]
+  * Rws plugin load detail
+
+  [ Thomas Nicky Thulesen ]
+  * Fixed to task framework. Added tests, fixed loader/savers and added a XML schema.
+
+  [ Michael K. Schmidt ]
+  * Weighted jacobian solver dev
+
+  [ Kasper Høj Lorenzen ]
+  * Jacobian ik solver fix
+
+  [ Thomas Nicky Thulesen ]
+  * Changed Ptr to use std::shared_ptr instead of boost::shared_ptr. 
+  * Added conversion functions between these types, and added more tests. 
+  * Moved some of the common tests into new core tests folder.
+  * AnyPtr returns a valid pointer if the user requests the correct type.
+
+  [ Thomas Nicky Thulesen ]
+  * Fixes after switching to std::shared_ptr and after changes to task framework.
+
+  [ Michael K. Schmidt ]
+  * Weighted jacobian solver dev
+
+  [ Kasper Høj Lorenzen ]
+  * Mac and centos errors
+  * Ci shared runner
+  * Q constructor
+  * Swig math update
+
+  [ Thomas Nicky Thulesen ]
+  * Fix to TaskLoader test: Load XML schema from disk instead of using URL.
+  * Fixed optional compile with ODE: ODESimCfgDialog.
+
+  [ Kasper Høj Lorenzen ]
+  * Devel error fixes
+  * Fixing lintian warnings
+  * added lua static
+  * removed sdurwsim lua static from search
+  * added static packages
+  * moved qhull and csgjs from sdurw to sdurw_geometry
+  * Debian errors fixes
+  * Version number updated to 1.1.3-1
+
+ -- Kasper Høj Lorenzen <kalor@mmmi.sdu.dk>  Wed, 27 May 2020 10:38:43 +0200
+
+robwork (1.1.2-1) bionic; urgency=medium
+
+  [ Thomas Nicky Thulesen ]
+  * Changes for DistanceStrategy and DistanceMultiStrategy
+  * added additional test and logging options in dynamic simulation.
+
+  [ Kasper Høj Lorenzen ]
+  * Rw core ptr not boost shared
+  * Swig sensor update
+  * Swig kinematics update
+  * Ubuntu 2004 deb setup
+  * Swig common update
+  * Ppa doc update
+  * added missing file
+  * Version number updated to 1.1.2-1
+
+ -- Kasper Høj Lorenzen <kalor@mmmi.sdu.dk>  Thu, 14 May 2020 16:59:11 +0200
+
+robwork (1.1.1-3) bionic; urgency=medium
+
+  * Removed mesa dependency and made swig more forward compatible
+  * updated dependency packages
+  * Version number updated to 1.1.1-3
+
+ -- Kasper Høj Lorenzen <kalor@mmmi.sdu.dk>  Wed, 06 May 2020 11:43:54 +0200
+
+robwork (1.1.1-2) bionic; urgency=medium
+
+  * Version number updated to 1.1.1-2
+
+ -- Kasper Høj Lorenzen <kalor@mmmi.sdu.dk>  Wed, 06 May 2020 11:42:57 +0200
+
+robwork (1.1.1-1) bionic; urgency=medium
+
+  [ Thomas Nicky Thulesen ]
+  * Update to Sphinx documentation with removal of javasphinx.
+  * Fixed various issues after examples have been renamed.
+
+  [ Thomas Nicky Thulesen ]
+  * Use MathJax for browser rendering of equations in documentation.
+
+  [ Kasper Høj Lorenzen ]
+  * Fixing bullet overwrite
+  * Fixed package conflict
+  * sdurws conflicts
+  * Uninstall update
+
+  [ Thomas Nicky Thulesen ]
+  * Removed installation guides for Mercurial and Subversion as these are no longer used. ODE now uses Git instead of Mercurial.
+
+  [ Thomas Nicky Thulesen ]
+  * Remove RobWorkStudio sandbox.
+
+  [ Kasper Høj Lorenzen ]
+  * Win static rws
+
+  [ Thomas Nicky Thulesen ]
+  * Cleaned up some sandbox folders.
+  * Fixed issue in RobWorkSim CMake and cleaned up further.
+
+  [ Kasper Høj Lorenzen ]
+  * Swig model update
+  * Version number updated to 1.1.1-1
+
+ -- Kasper Høj Lorenzen <kalor@mmmi.sdu.dk>  Tue, 05 May 2020 10:19:19 +0200
+
+robwork (1.1.0-1) bionic; urgency=medium
+
+  [ Kasper Høj Lorenzen ]
+  * Updated CollisionDetector
+  * Fixed Segmentation fault problem
+  * Collision Detector example
+  * renamed lua examples to foollow convention
+  * refix exception
+  * Added Geometry color
+  * Changed Color
+  * Fixed WCE  to add colors to geometry
+  * FramePicker
+  * added load rwsplugin
+  * Updated swig version
+  * Fixed /etc/os-release ID Problem
+  * Updating regex
+  * removed unnessesary code
+  * RobWorkHardware cmakeConfig
+  * added free glut to requirements
+  * Ready for RWSudio example test run
+  * Remove boost foreach
+  * Negative jog
+  * Subsys depend
+  * rws start, load wc and detect rws close
+  * Windows warning update
+  * Devel CI Error update
+  * Get collision geometry
+  * Rws transparency
+  * RW and RWHW Windows Installer
+  * Remove boost matrix
+  * CentOS transparency Troubles
+  * Rwhw find rw and ur rtde
+  * Fcl0.6 ready
+  * Rwhw example test
+  * adding sdurw_core lib
+  * Added fix for libsdurw-geometry1.0 conflict
+  * fixed CI error
+  * added upgrade test
+  * added rw_core to python and lua dependencies
+  * Fixed CI syntax errors
+  * Fixed naming problems in control file
+  * Added libraries to library list
+  * Increase Version
+  * Mac os ci test
+  * added final newline
+  * auto update change log
+  * Updated changelog
+
+  [ Thomas Nicky Thulesen ]
+  * Updated compilation tutorials with Ubuntu 20.04 and newest version numbers.
+
+  [ Kasper Høj Lorenzen ]
+  * added rw_core-dev
+  * Eigen reduce
+  * added rw_math and rw_common
+  * added common-dev and math-dev
+  * Version number updated to 1.1.0-1
+
+ -- Kasper Høj Lorenzen <kalor@mmmi.sdu.dk>  Mon, 27 Apr 2020 16:46:22 +0200
+
+robwork (1.0.11-2) bionic; urgency=medium
+
+  * Ignore package version for lua
+  * Version number updated to 1.0.11-2
+
+ -- Kasper Høj Lorenzen <kalor@mmmi.sdu.dk>  Tue, 03 Mar 2020 10:33:14 +0100
+
+robwork (1.0.11-1) bionic; urgency=medium
+
+  * Generate documentation for robworkhardware
+  * Find RWHW components
+  * added Ptr type to ur_rtde
+  * Formated slider tab
+  * Force CI-yes
+  * Compile without assimp
+  * Increassed speed of DWC loader
+  * Formatted dwc loader
+  * updates for failing debian test
+  * swig Javadoc update
+  * Version number updated to 1.0.11-1
+
+ -- Kasper Høj Lorenzen <kalor@mmmi.sdu.dk>  Mon, 02 Mar 2020 16:30:46 +0100
+
+robwork (1.0.10-3) bionic; urgency=medium
+
+  * added new line after questions
+  * re-implemented sdurws_luapl
+  * Fixed version number on liblua5.3
+  * Version number updated to 1.0.10-3
+
+ -- Kasper Høj Lorenzen <kalor@mmmi.sdu.dk>  Thu, 27 Feb 2020 10:12:44 +0100
+
+robwork (1.0.10-2) bionic; urgency=medium
+
+  * fixed sign path
+  * Version number updated to 1.0.10-2
+
+ -- Kasper Høj Lorenzen <kalor@mmmi.sdu.dk>  Wed, 26 Feb 2020 16:58:51 +0100
+
+robwork (1.0.10-1) bionic; urgency=medium
+
+  [ Kasper Høj Lorenzen ]
+  * Changed python include in rws
+  * Cmake bump
+  * Lua problems on windows
+  * Misc changes
+  * Minor fixes
+  * Devel master merge
+  * Documentation update
+  * CMake system update and VS 2019 fixes
+  * Fixed wrong merge
+  * Workcell reload
+  * CMake and PPA Doc update
+  * Compile with ppa
+  * Rob work components
+
+  [ Ken Sørensen ]
+  * Specify how to use CMake options for customizing
+
+  [ Thomas Nicky Thulesen ]
+  * Updated installation tutorials with newest version numbers.
+
+  [ Ken Sørensen ]
+  * Changing Sphinx markup
+
+  [ Thomas Nicky Thulesen ]
+  * Removed support for Qt 4, and added missing RobWorkStudioApp and WorkCellEditor libraries to RobWorkStudio libraries variable. Changed global include/linking directories to per-target linking.
+  * Updated documentation to show that only Qt5 is supported.
+
+  [ Ken Sørensen ]
+  * Changed bash => shell, since code does not show on webpage
+  * Removing documentation there has been moved to sphinx
+  * Removing documentation there has been moved to sphinx
+  * Removing documentation there has been moved to sphinx
+
+  [ Thomas Nicky Thulesen ]
+  * Fixed error in RobWorkStudio examples.
+
+  [ Kasper Høj Lorenzen ]
+  * Pivot point scaling
+  * Wc edit update
+
+  [ Thomas Nicky Thulesen ]
+  * Added exported CMake targets for the four RobWork projects. When all projects are built in the same build system, this is used to make sure that the libraries are built in the correct order.
+  * Fixes for CMake target exports.
+  * Added find_package for Threads library (for Ubuntu 19.04 and newer).
+
+  [ Kasper Høj Lorenzen ]
+  * Windows installer
+
+  [ Thomas Nicky Thulesen ]
+  * Added ability to set Extension properties in RobWork plugins when using lazy loading.
+  * Updated README file for the RobWork project and removed the old ReadMe files for the individual projects.
+
+  [ Kasper Høj Lorenzen ]
+  * Examples fix
+
+  [ Ken Sørensen ]
+  * Adding basic tutorial
+  * Removing RobWork - A Programming Primer
+
+  [ Kasper Høj Lorenzen ]
+  * Window rw sim free glut import
+
+  [ Ken Sørensen ]
+  * Adding new basic tutorial
+  * Remove old doxygen tutorial
+
+  [ Thomas Nicky Thulesen ]
+  * Optional compile of smaller parts of RobWork
+  * Added linking of RWSimPlugin to sdurw_lua_s library.
+
+  [ Kasper Høj Lorenzen ]
+  * Addeding doxygen documentation for RobWork Hardware
+
+  [ Thomas Nicky Thulesen ]
+  * Removed Ubuntu 19.04 (EOL) from CI and added Ubuntu 20.04 instead.
+
+  [ Kasper Høj Lorenzen ]
+  * added Test build option
+  * Changed Build Folder
+  * copy tar file after test build
+  * Testing detection of file
+  * Auto test build with debuild
+  * removed lua_s libs
+  * Testing new CI
+  * ignore key if doing a test build
+  * Varify git status for test
+  * disabled normal test
+  * new tar generation
+  * fixed tar position
+  * new tar file
+  * file definition changed
+  * fix version
+  * Fixed space before version problem
+  * build debian package
+  * added sdurwsim_ode package
+  * fixed ode package name
+  * removed missing include files from dh_install
+  * Move artifacts
+  * Added tests of debian package
+  * Fixed CI-yml error
+  * added correct path to deb packages
+  * added missing targets
+  * Found missing libraries
+  * removed empty script command
+  * added lua editor
+  * removed duplicate log
+  * fixed lua name
+  * Change lua pl include folder
+  * overview of package install generator key words
+  * removed deprecated file list
+  * Updated ode package
+  * Updated packages
+  * Debian updates
+  * Rwhw examples
+  * Rwsapp loadplugin
+  * Freeglut winerror
+  * Wcedit tab indent
+  * Rws slider scaling
+  * Obj loader error
+  * CI-test fix and rwstudioapp link problem
+  * ignore lua plugin
+  * Removed Cout
+  * Undid local changes for .gitlab-ci-common.yml
+  * added missing installer
+  * Removed local changes
+  * rw::Proximity Swig
+  * Version number updated to 1.0.10-1
+
+ -- Kasper Høj Lorenzen <kalor@mmmi.sdu.dk>  Wed, 26 Feb 2020 16:55:01 +0100
+
+robwork (1.0.9-5) bionic; urgency=medium
+
+  * Version number updated to 1.0.9-5
+
+ -- Kasper Høj Lorenzen <kalor@mmmi.sdu.dk>  Thu, 23 Jan 2020 15:12:53 +0100
+
+robwork (1.0.9-4) bionic; urgency=medium
+
+  * Version number updated to 1.0.9-4
+
+ -- Kasper Høj Lorenzen <kalor@mmmi.sdu.dk>  Thu, 23 Jan 2020 15:09:24 +0100
+
+robwork (1.0.9-3) bionic; urgency=medium
+
+  * Version number updated to 1.0.9-3
+
+ -- Kasper Høj Lorenzen <kalor@mmmi.sdu.dk>  Thu, 23 Jan 2020 15:08:13 +0100
+
+robwork (1.0.9-2) bionic; urgency=medium
+
+  * moved static lua to cmake package
+  * Version number updated to 1.0.9-2
+
+ -- Kasper Høj Lorenzen <kalor@mmmi.sdu.dk>  Fri, 06 Dec 2019 09:45:03 +0100
+
+robwork (1.0.9-1) bionic; urgency=medium
+
+  * removed lua libs
+  * re-added lua
+  * lua install update
+  * removed static lib rwsim
+  * added libsdurws_lua_s.a
+  * Version number updated to 1.0.9-1
+
+ -- Kasper Høj Lorenzen <kalor@mmmi.sdu.dk>  Mon, 02 Dec 2019 17:49:22 +0100
+
+robwork (1.0.8-2) bionic; urgency=medium
+  
+  * Disable Lua
+  * Version number updated to 1.0.8-2
+
+ -- Kasper Høj Lorenzen <kalor@mmmi.sdu.dk>  Mon, 02 Dec 2019 16:30:08 +0100
+
+robwork (1.0.8-1) bionic; urgency=medium
+
+  * Lua install update
+  * Changed release message
+  * Small changes
+  * merge from origin/master
+  * rwplugin install
+  * fixed package error
+  * Added lua pkg back
+  * fixed spelling
+  * fixed file names
+  * more name changes
+  * added lib simplefinger
+  * simplefinger update
+  * simplefinger update
+  * Version number updated to 1.0.8-1
+
+ -- Kasper Høj Lorenzen <kalor@mmmi.sdu.dk>  Wed, 27 Nov 2019 15:24:02 +0100
+
+robwork (1.0.7-1) bionic; urgency=medium
+
+  * dependency on rws plugins
+  * Ci shared runners
+  * Fixed spelling mistake
+  * fixed Changelog warnings
+  * update find non installed files
+  * syntax fix
+  * added python packages
+  * fixed ; error
+  * added lua packages
+  * updated python packages
+  * added Lua packages
+  * added meta packages for lua and python
+  * corrected syntax error
+  * added missing dependencies
+  * Changed multi-arch policy for python packages
+  * Lintian warning removal
+  * Rules layout
+  * changed dependency for python
+  * removed lua install
+  * Architecture fixes
+  * added lintian overrides
+  * indentation fix
+  * Version number updated to 1.0.7-1
+
+ -- Kasper Høj Lorenzen <kalor@mmmi.sdu.dk>  Tue, 26 Nov 2019 15:06:17 +0100
+
+robwork (1.0.6-12) bionic; urgency=medium
+
+  [ Ken Sørensen ]
+  * Fixed some doxygen issues.
+  * Edited .gitignore
+  * LUA
+
+  [ Thomas Nicky Thulesen ]
+  * Fixed error in RobWorkHardwareConfig path.
+
+  [ Kasper Høj Lorenzen ]
+  * Rws python plugin
+  * WorkCell Editor Auto load rws workcell
+  * Fix to compile python plugin with python2
+  * Fixed Workcell editor  autocomplete
+  * Workcell editor doc
+  * py-plugin fixed char* problem
+  * Auto Find refFrames
+  * Removed Qhull from Robwork lib list
+  * Python Plugins now connects to rwstudio
+  * Removed csgjs from lib list
+  * Eol ubuntu 1404 1810
+  * Windows and Centos build error fix
+  * Windwos fix2
+  * Rws pyplugin fix
+  * Rwsim Tool fix
+  * Cmake options
+  * Revert of renaming
+  * SWIG update adding simulated sensor
+  * Made RobWork Lua rwplugin modules
+  * CMake Standard setup
+  * New name fix
+  * Version numbers
+  * RobWork error fix
+  * Win missing glut
+  * Glut error fix
+  * RoVi python plugin
+  * Python plugin doc
+  * changes to cmaked std
+  * fixed missing cmake pkg
+  * fixed CI repo
+  * Changed 2.6 and 2.5
+  * Swig and cmake update error fix
+
+  [ Ken Sørensen ]
+  * test
+  * Adding Ubuntu PPA installatiob
+  * Adding Ubuntu PPA installatiob
+  * Adding Ubuntu PPA installatiob
+
+  [ Kasper Høj Lorenzen ]
+  * Version number update
+  * remove missing include
+
+  [ Ken Sørensen ]
+  * test
+  * new .gitignore
+  * Delete Lua_rw.hpp
+  * Delete Lua_rw_task.hpp
+  * Delete Lua_rw_simulation.hpp
+  * Delete Lua_rw_proximitystrategies.hpp
+  * Delete Lua_rw_pathplanners.hpp
+  * Delete Lua_rw_pathoptimization.hpp
+  * Delete Lua_rw_control.hpp
+  * Delete Lua_rw_assembly.hpp
+  * Update .gitignore
+
+  [ Kasper Høj Lorenzen ]
+  * Removed rws config in rwhw
+  * new CI pipline
+  * Macrofile problem fix
+  * Fix to glut problem RW example
+  * Rwsim python fix
+  * Loader obj formatting
+  * simplgui example fix
+  * RenderModel3D format
+  * RobWork java Ex update
+  * RobWork lua examples fixed
+  * Ci windows fix
+  * Robwork py example update
+  * Load .obj files with texture
+  * Windows python include fix
+
+  [ Ken Sørensen ]
+  * Documentation for Ubuntu changed
+
+  [ Kasper Høj Lorenzen ]
+  * Sdurws examples
+  * Make install for python (part1) rw
+  * Python plugin update
+  * Obj loader update
+  * Windows rws python
+  * Make install for python (part2) rw2
+  * Moved policy classification and removed redondent cmake code
+  * Python install fix
+  * Ci update
+  * Make install for python (part3) rwsim
+  * Python install fix
+  * Glut fix for new update
+  * Lua install
+  * getVersion script created
+  * Added keyVariable and version fix
+  * updated gbp branch specifications
+  * ignore patch location
+  * removed space
+  * minor fixes
+  * Changed Version system
+  * rules test
+  * Passing the version to cmake automatically
+  * remove space before version
+  * removing space
+  * Removed faulty file
+  * Removed RobWork HardwareMacro for installation
+  * updated git ignore
+  * Windows and Free glut update
+  * PPA and CMake Doc
+  * added lua dependency
+  * Version number updated to 1.0.6-12
+
+ -- Kasper Høj Lorenzen <kalor@mmmi.sdu.dk>  Fri, 22 Nov 2019 11:24:49 +0100
+
+robwork (1.0.6-11) xenial; urgency=medium
+
+  * Upload of xenial release with previus modefications
+  * Version number updated to 1.0.6-11
+
+ -- Kasper Høj Lorenzen <kalor@mmmi.sdu.dk>  Mon, 21 Oct 2019 09:10:26 +0200
+
+robwork (1.0.6-10) bionic; urgency=medium
+  
+  * Corrected file path of of docs and man page
+  * Version number updated to 1.0.6-10
+
+ -- Kasper Høj Lorenzen <kalor@mmmi.sdu.dk>  Mon, 21 Oct 2019 09:08:48 +0200
+
+robwork (1.0.6-9) bionic; urgency=medium
+  
+  * Add previus update to ubuntu1804
+  * Version number updated to 1.0.6-9
+
+ -- Kasper Høj Lorenzen <kalor@mmmi.sdu.dk>  Fri, 18 Oct 2019 12:28:51 +0200
+
+robwork (1.0.6-8) xenial; urgency=medium
+
+  * dont rewrite package version number for debrev
+  * Don't compile tests
+  * Disable GTest
+  * build parallel
+  * autoremove temp files
+  * fixed delete error
+  * Changed where to look for man page
+  * Version number updated to 1.0.6-8
+
+ -- Kasper Høj Lorenzen <kalor@mmmi.sdu.dk>  Fri, 18 Oct 2019 12:26:10 +0200
+
+robwork (1.0.6-7) xenial; urgency=medium
+
+  * Fixed dependency issues for ubuntu xenial
+  * Version number updated to 1.0.6-7
+
+ -- Kasper Høj Lorenzen <kalor@mmmi.sdu.dk>  Tue, 15 Oct 2019 10:36:58 +0200
+
+robwork (1.0.6-6) xenial; urgency=medium
+
+  * Version number updated to 1.0.6-5
+  * Updated Changelog to version 1.0.6-5
+  * Version number updated to 1.0.6-6
+
+ -- Kasper Høj Lorenzen <kalor@mmmi.sdu.dk>  Tue, 15 Oct 2019 10:11:42 +0200
+
+robwork (1.0.6-4) xenial; urgency=medium
+
+  * Initial support for ubuntu 16.04
+  * Version number updated to 1.0.6-4
+
+ -- Kasper Høj Lorenzen <kalor@mmmi.sdu.dk>  Tue, 15 Oct 2019 10:02:56 +0200
+
+robwork (1.0.6-3) bionic; urgency=medium
+
+  * Fixed missing install packages
+  * Version number updated to 1.0.6-3
+
+ -- Kasper Høj Lorenzen <kalor@mmmi.sdu.dk>  Mon, 14 Oct 2019 10:19:12 +0200
+
+robwork (1.0.6-2) bionic; urgency=medium
+
+  * added fcldev dep
+  * Version number updated to 1.0.6-2
+
+ -- Kasper Høj Lorenzen <kalor@mmmi.sdu.dk>  Fri, 11 Oct 2019 15:02:37 +0200
+
+robwork (1.0.6-1) bionic; urgency=medium
+
+  * Removed CSGJS from lib list
+  * Virsion number in cmake files updated to 1.0.6
+  * Version number updated to 1.0.6-1
+
+ -- Kasper Høj Lorenzen <kalor@mmmi.sdu.dk>  Fri, 11 Oct 2019 12:49:10 +0200
+
+robwork (1.0.5-1) bionic; urgency=medium
+
+  * Removed QHULL from lib list
+  * Virsion number in cmake files updated to 1.0.5
+  * Version number updated to 1.0.5-1
+
+ -- Kasper Høj Lorenzen <kalor@mmmi.sdu.dk>  Thu, 10 Oct 2019 09:01:38 +0200
+
+robwork (1.0.4-6) bionic; urgency=medium
+
+  * Fixed rw package problem
+  * Version number updated to 1.0.4-6
+
+ -- Kasper Høj Lorenzen <kalor@mmmi.sdu.dk>  Tue, 08 Oct 2019 12:21:56 +0200
+
+robwork (1.0.4-5) bionic; urgency=medium
+
+  * Added missing h files
+  * Version number updated to 1.0.4-5
+
+ -- Kasper Høj Lorenzen <kalor@mmmi.sdu.dk>  Mon, 07 Oct 2019 15:57:55 +0200
+
+robwork (1.0.4-4) bionic; urgency=medium
+
+  * Version number updated to 1.0.4-4
+
+ -- Kasper Høj Lorenzen <kalor@mmmi.sdu.dk>  Fri, 04 Oct 2019 12:25:58 +0200
+
+robwork (1.0.4-3) bionic; urgency=medium
+
+  * Include rwsim includes
+  * Added missing files to install
+  * Fixed Include of missing files
+  * Adde rwhwconfig.hpp
+  * Version number updated to 1.0.4-3
+
+ -- Kasper Høj Lorenzen <kalor@mmmi.sdu.dk>  Fri, 04 Oct 2019 11:08:41 +0200
+
+robwork (1.0.4-2) bionic; urgency=medium
+
+  * changelog spell error fix
+  * Fixed spelling and section mistakes
+  * Version number updated to 1.0.4-2
+
+ -- Kasper Høj Lorenzen <kalor@mmmi.sdu.dk>  Thu, 03 Oct 2019 11:44:57 +0200
+
+robwork (1.0.4-1) bionic; urgency=medium
+
+  * removed unnessesary dependencies
+  * Changed ur_rtde .h file location
+  * missing file fixes
+  * add rwsim cmake files
+  * Debug messages
+  * Removed warnings and set -Werror for pipline
+  * Made rws lib use RW_ADD_LIBRARY
+  * Place rwsim hpp in correct dir
+  * Virsion number in cmake files updated to 1.0.4
+  * Version number updated to 1.0.4-1
+
+ -- Kasper Høj Lorenzen <kalor@mmmi.sdu.dk>  Thu, 03 Oct 2019 11:15:01 +0200
+
+robwork (1.0.3-2) bionic; urgency=medium
+
+  * added missing comma
+  * Version number updated to 1.0.3-2
+
+ -- Kasper Høj Lorenzen <kalor@mmmi.sdu.dk>  Wed, 02 Oct 2019 16:18:53 +0200
+
+robwork (1.0.3-1) bionic; urgency=medium
+
+  [ Kasper Høj Lorenzen ]
+  * Text render class
+
+  [ Michael K. Schmidt ]
+  * leading zeros in image output playback plugin
+
+  [ Kasper Høj Lorenzen ]
+  * SWIG update adding simulated sensor types (Camera, Scanner2D and Scanner25D types and related). Made RobWork Lua rwplugin modules such that all the Lua modules are available in RobWorkStudio.
+
+  [ Michael K. Schmidt ]
+  * moved leading zeros to separate function
+  * added "recording" only check for kasper <3
+
+  [ Kasper Høj Lorenzen ]
+  * Added glut as optional dependency
+  * Made a Text render
+  * Made text render available
+  * Fixed Test with new vertual functions
+  * Fixed Ptr function description
+  * Initialize Glut for robworkstudio
+  * Removed signed/unsigned comparrison warning
+  * Added frame to the constructer of RenderText
+  * Fixed hidden label, and frame orientation
+  * Removed Debug code
+  * Warning fix
+  * Description fix
+  * Fixed near field label remove problem
+  * removed Cout
+  * Warning fixes
+  * Zoom fix
+  * Warning fixes
+  * Add Frame labels from tree view
+  * Added getPlugins Function
+  * Fixed GLUT include error
+  * Warning fix
+  * Fixed glut include for older cmake versions
+  * Glut fix v2
+  * made line ending
+  * Fixed Naming error
+  * Objects follow mouse when doing a pan.
+  * Changed M_Pi to rw::math::Pi
+  * Changed pipline to use new-name bransh
+  * Fixing pipline test
+  * Made cmake packages
+  * Fix to rwsim build problem
+  * update version number
+  * Warning fixes
+  * removed boostbindings
+  * Added werror compile flag to pipline test
+  * RWS with werror flag in pipline
+  * Install robwork
+  * Removed auto generated files
+  * removed auto generated files
+  * ignor debian folder
+  * Version number updated to 1.0.3-1
+  * Virsion number in cmake files updated to 1.0.3
+
+ -- Kasper Høj Lorenzen <kalor@mmmi.sdu.dk>  Wed, 02 Oct 2019 16:14:54 +0200
+
+robwork (1.0.2-2) bionic; urgency=medium
+
+  * Removed dependency on non exsistant  libsdurwhw1.0
+  * Version number updated to 1.0.2-2
+
+ -- Kasper Høj Lorenzen <kalor@mmmi.sdu.dk>  Thu, 26 Sep 2019 09:36:01 +0200
+
+robwork (1.0.2-1) bionic; urgency=medium
+
+  * Version number updated to 1.0.2-1
+  * Virsion number in cmake files updated to 1.0.2
+
+ -- Kasper Høj Lorenzen <kalor@mmmi.sdu.dk>  Thu, 19 Sep 2019 09:21:00 +0200
+
+robwork (1.0.1-2) bionic; urgency=medium
+
+  * fixed arch problem
+  * Fixes to lintian warnings
+  * Fixed empty binary problem
+  * Version number updated to 1.0.1-2
+
+ -- Kasper Høj Lorenzen <kalor@mmmi.sdu.dk>  Wed, 18 Sep 2019 10:50:05 +0200
+
+robwork (1.0.1-1) bionic; urgency=medium
+
+  * Removed folders from uninstalled files
+  * Changed aTask and gTask to modules
+  * Added missing packages and include files
+  * Version number updated to 1.0.1-1
+  * Virsion number in cmake files updated to 1.0.1
+
+ -- Kasper Høj Lorenzen <kalor@mmmi.sdu.dk>  Tue, 17 Sep 2019 14:02:52 +0200
+
+robwork (1.0.0-6) bionic; urgency=medium
+
+  * Version number updated to 1.0.0-6
+
+ -- Kasper Høj Lorenzen <kalor@mmmi.sdu.dk>  Tue, 17 Sep 2019 12:30:54 +0200
+
+robwork (1.0.0-5) bionic; urgency=medium
+
+  * Fixed seperation errors in control
+  * Version number updated to 1.0.0-5
+
+ -- Kasper Høj Lorenzen <kalor@mmmi.sdu.dk>  Tue, 17 Sep 2019 12:26:08 +0200
+
+robwork (1.0.0-4) bionic; urgency=medium
+
+  * Removed unused file and commented code
+  * Added -all packages
+  * Version number updated to 1.0.0-4
+
+ -- Kasper Høj Lorenzen <kalor@mmmi.sdu.dk>  Tue, 17 Sep 2019 12:21:37 +0200
+
+robwork (1.0.0-3) bionic; urgency=medium
+
+  * Removed test file
+  * Version number updated to 1.0.0-3
+
+ -- Kasper Høj Lorenzen <kalor@mmmi.sdu.dk>  Tue, 17 Sep 2019 09:27:06 +0200
+
+robwork (1.0.0-2) bionic; urgency=medium
+
+  * Fixed Version numbers in control file
+  * Version number updated to 1.0.0-2
+
+ -- Kasper Høj Lorenzen <kalor@mmmi.sdu.dk>  Tue, 17 Sep 2019 09:25:11 +0200
+
+robwork (1.0.0-1) bionic; urgency=medium
+
+  * Virsion number in cmake files updated to 1.0.0
+  * Version number updated to 1.0.0-1
+
+ -- Kasper Høj Lorenzen <kalor@mmmi.sdu.dk>  Mon, 16 Sep 2019 17:22:33 +0200
+
+robwork (0.8.5-1) bionic; urgency=medium
+
+  [ Kasper Høj Lorenzen ]
+  * PlayBack Recording problem mitigated
+  * Fixed copy paste Problem
+
+  [ Thomas Nicky Thulesen ]
+  * Update ur_rtde to 354cd8e3
+
+  [ Kasper Høj Lorenzen ]
+  * Changed plugins to be modules as standard
+  * Autoload plugins  in /usr/lib/*/RobWork/rwsplugins
+  * Version number updated to 0.8.5-1
+  * Virsion number in cmake files updated to 0.8.5
+
+ -- Kasper Høj Lorenzen <kalor@mmmi.sdu.dk>  Mon, 16 Sep 2019 15:21:32 +0200
+
+robwork (0.8.4-2) bionic; urgency=medium
+
+  * Removed package version from dev packages
+  * Version number updated to 0.8.4-2
+
+ -- Kasper Høj Lorenzen <kalor@mmmi.sdu.dk>  Mon, 16 Sep 2019 10:42:20 +0200
+
+robwork (0.8.4-1) bionic; urgency=medium
+
+  * rws plugins moved to plugin folder
+  * Virsion number in cmake files updated to 0.8.4
+  * Version number updated to 0.8.4-1
+
+ -- Kasper Høj Lorenzen <kalor@mmmi.sdu.dk>  Mon, 16 Sep 2019 10:19:58 +0200
+
+robwork (0.8.3-1) bionic; urgency=medium
+
+  * Changed Plugin Library directory
+  * Version number updated to 0.8.3-1
+  * Virsion number in cmake files updated to 0.8.3
+
+ -- Kasper Høj Lorenzen <kalor@mmmi.sdu.dk>  Mon, 16 Sep 2019 09:05:42 +0200
+
+robwork (0.8.2-1) bionic; urgency=medium
+
+  * Made PluginFolder
+  * Version number updated to 0.8.2-1
+  * Virsion number in cmake files updated to 0.8.2
+
+ -- Kasper Høj Lorenzen <kalor@mmmi.sdu.dk>  Fri, 13 Sep 2019 14:14:13 +0200
+
+robwork (0.8.1-1) bionic; urgency=medium
+
+  * Version number updated to 0.8.1-1
+  * Virsion number in cmake files updated to 0.8.1
+
+ -- Kasper Høj Lorenzen <kalor@mmmi.sdu.dk>  Fri, 13 Sep 2019 12:32:45 +0200
+
+robwork (0.8.0-6) bionic; urgency=medium
+
+  * fixed Syntax error
+  * Changed commit messages
+  * Version number updated to 0.8.0-6
+
+ -- Kasper Høj Lorenzen <kalor@mmmi.sdu.dk>  Fri, 13 Sep 2019 12:28:35 +0200
+
+robwork (0.8.0-5) bionic; urgency=medium
+
+  * Version number updated
+
+ -- Kasper Høj Lorenzen <kalor@mmmi.sdu.dk>  Fri, 13 Sep 2019 12:06:50 +0200
+
+robwork (0.8.0-4) bionic; urgency=medium
+
+  * Fixed upload issue
+  * Version number updated
+
+ -- Kasper Høj Lorenzen <kalor@mmmi.sdu.dk>  Fri, 13 Sep 2019 11:25:29 +0200
+
+robwork (0.8.0-3) bionic; urgency=medium
+
+  * Fixed debrev deply issue
+  * Version number updated
+
+ -- Kasper Høj Lorenzen <kalor@mmmi.sdu.dk>  Fri, 13 Sep 2019 11:24:06 +0200
+
+robwork (0.8.0-2) bionic; urgency=medium
+
+  * Version number updated
+
+ -- Kasper Høj Lorenzen <kalor@mmmi.sdu.dk>  Fri, 13 Sep 2019 11:22:29 +0200
+
+robwork (0.8.0-1) bionic; urgency=medium
+
+  [ Kasper Høj Lorenzen ]
+  * Build Java packages
+  * Fixed Constructer for DynamicSimulation java
+  * Added smartpointer type TimeStatePath
+  * Some memory leak fixed
+  * Timestateptr to timestate::ptr
+  * Fixed git ignore and added getState
+  * Reload btn added
+  * Added relative zoom
+  * Fixed Merge error
+  * Outlined Render now possible
+  * Highlight with Shading
+  * New Icons
+  * Rename of resources file
+  * Replacing btn icon
+  * Added extra files
+  * Last playPause btn fix
+  * Fixed test with new shading colors
+  * Remove debug printouts
+  * Removed leftover code
+  * Fixed Formatting
+  * Fix issue  non interpolated concatenated playback
+
+  [ Anders Prier Lindvig ]
+  * Added missing return status for reconnect function
+
+  [ Kasper Høj Lorenzen ]
+  * Rename from uing to size_t
+
+  [ Thomas Nicky Thulesen ]
+  * SWIG update adding simulated sensor types. 
+  * All the Lua modules are available in RobWorkStudio.
+  * Fix Windows build not finding SWIG correctly.
+  * Added missing simulation library to the generation of Javadoc. 
+  * Also fixed the python API documentation.
+
+  [ Kasper Høj Lorenzen ]
+  * Enforced dependencies
+
+  [ Thomas Nicky Thulesen ]
+  * Added SWIG types for Kinematics, FKRange and FKTable. 
+  * Fixed inverse functions for Rotation3D and Transform3D, 
+  * and added convert functions between Quaternions and EAA.
+  * Updated documentation.
+
+  [ Kasper Høj Lorenzen ]
+  * Fixed simulation rename error
+
+  [ Thomas Nicky Thulesen ]
+  * Fixed broken example after modification.
+
+  [ Kasper Høj Lorenzen ]
+  * Merge now compiles
+
+  [ Thomas Nicky Thulesen ]
+  * Documentation upgrade related to installatio guide, 
+  * RobWorkStudio plugins, kinematics, C++ interface and 
+  * WorkCell XML format.
+
+  [ Kasper Høj Lorenzen ]
+  * Clean up
+
+  [ Thomas Nicky Thulesen ]
+  * Fixed broken pluginUIapp example in CMake less than 3.9. 
+  * Updated RobWorkStudio plugin documentation.
+
+  [ Kasper Høj Lorenzen ]
+  * moved deployment code into functions
+  * Added more packages
+  * Removed unused GemoetryComoBox
+  * Changed package .install generation
+  * Fixed compile error
+  * Virsion number in cmake files updated
+  * Version number updated
+
+ -- Kasper Høj Lorenzen <kalor@mmmi.sdu.dk>  Thu, 12 Sep 2019 10:06:14 +0200
+
+robwork (0.7.12-1) bionic; urgency=medium
+
+  * Virsion number in cmake files updated
+
+ -- Kasper Høj Lorenzen <kalor@mmmi.sdu.dk>  Mon, 09 Sep 2019 16:29:28 +0200
+
+robwork (0.7.11-2) bionic; urgency=medium
+
+  * Version number updated
+
+ -- Kasper Høj Lorenzen <kalor@mmmi.sdu.dk>  Mon, 09 Sep 2019 16:26:01 +0200
+
+robwork (0.7.11-1) bionic; urgency=medium
+
+  * Upgraded gen script
+  * Made Atask and Gtask Shared
+  * Version number updated
+  * Version number updated
+  * Version number updated
+  * fixed error in ready script
+  * Virsion number in cmake files updated
+  * Version number updated
+
+ -- Kasper Høj Lorenzen <kalor@mmmi.sdu.dk>  Mon, 09 Sep 2019 15:56:36 +0200
+
+robwork (0.7.9-1) bionic; urgency=medium
+
+  * Fixing Vision numbers in the control file
+  * UpdateControlPkgVersion is working
+  * Fixing up lintian errors
+  * Fixed problem with space before comma
+  * Moving of files and general build updates
+  * Deleted shlib dependency for -dev packages
+  * Fixed gen.script with new folder
+  * removed doc-files
+  * Made sdurws shared library with version numbers
+  * Virsion number in cmake files updated
+  * Version number updated
+
+ -- Kasper Høj Lorenzen <kalor@mmmi.sdu.dk>  Mon, 09 Sep 2019 12:27:44 +0200
+
+robwork (0.7.8-1) bionic; urgency=medium
+
+  * Version number updated
+  * Version number updated
+  * More version tuning
+  * Virsion number in cmake files updated
+  * Version number updated
+
+ -- Kasper Høj Lorenzen <kalor@mmmi.sdu.dk>  Wed, 04 Sep 2019 16:20:20 +0200
+
+robwork (0.7.7-1) bionic; urgency=medium
+
+  * Virsion number in cmake files updated
+  * Version number updated
+
+ -- Kasper Høj Lorenzen <kalor@mmmi.sdu.dk>  Wed, 04 Sep 2019 15:58:18 +0200
+
+robwork (0.7.0-1) bionic; urgency=medium
+
+  * Initial release
+
+ -- Kasper Høj Lorenzen <kalor@mmmi.sdu.dk>  Wed, 28 Aug 2019 10:00:00 +0200

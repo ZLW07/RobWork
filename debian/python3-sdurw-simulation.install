@@ -1,0 +1,3 @@
+usr/lib/*/dist-packages/sdurw_simulation/sdurw_simulation.py
+usr/lib/*/dist-packages/sdurw_simulation/_sdurw_simulation*.so
+usr/lib/*/dist-packages/sdurw_simulation/__init__.py

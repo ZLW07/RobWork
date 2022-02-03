@@ -1,0 +1,3 @@
+usr/lib/*/dist-packages/sdurw_assembly/sdurw_assembly.py
+usr/lib/*/dist-packages/sdurw_assembly/_sdurw_assembly*.so
+usr/lib/*/dist-packages/sdurw_assembly/__init__.py

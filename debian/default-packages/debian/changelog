@@ -1,0 +1,17 @@
+robwork-default (1.2.8-1) focal; urgency=medium
+
+  * Updated all-dev packages to point on internal meta packages
+
+ -- Kasper Høj Lorenzen <kalor@mmmi.sdu.dk>  Thu, 12 Nov 2020 13:00:00 +0200
+
+robwork-default (1.2.7-1) focal; urgency=medium
+
+  * Initial version
+
+ -- Kasper Høj Lorenzen <kalor@mmmi.sdu.dk>  Thu, 11 Nov 2020 15:32:03 +0200
+
+robwork-default (1.2.6-1) bionic; urgency=medium
+
+  * Initial version
+
+ -- Kasper Høj Lorenzen <kalor@mmmi.sdu.dk>  Thu, 22 Oct 2020 14:18:03 +0200

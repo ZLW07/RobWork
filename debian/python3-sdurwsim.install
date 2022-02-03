@@ -1,0 +1,6 @@
+usr/lib/*/dist-packages/sdurwsim/sdurwsim.py
+usr/lib/*/dist-packages/sdurwsim/_sdurwsim*.so
+usr/lib/*/dist-packages/sdurwsim/__init__.py
+usr/lib/*/dist-packages/RobWorkSim-*.egg-info
+usr/share/robworksim-*/cmake/RobWorkSimpythonTargets.cmake
+usr/share/robworksim-*/cmake/RobWorkSimpythonTargets-none.cmake

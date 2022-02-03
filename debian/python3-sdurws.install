@@ -1,0 +1,6 @@
+usr/lib/*/dist-packages/sdurws/sdurws.py
+usr/lib/*/dist-packages/sdurws/_sdurws*.so
+usr/lib/*/dist-packages/sdurws/__init__.py
+usr/lib/*/dist-packages/RobWorkStudio-*.egg-info
+usr/share/robworkstudio-*/cmake/RobWorkStudiopythonTargets.cmake
+usr/share/robworkstudio-*/cmake/RobWorkStudiopythonTargets-none.cmake

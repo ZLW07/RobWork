@@ -1,0 +1,3 @@
+usr/lib/*/dist-packages/sdurw_models/sdurw_models.py
+usr/lib/*/dist-packages/sdurw_models/_sdurw_models*.so
+usr/lib/*/dist-packages/sdurw_models/__init__.py

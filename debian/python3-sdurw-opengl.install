@@ -1,0 +1,3 @@
+usr/lib/*/dist-packages/sdurw_opengl/sdurw_opengl.py
+usr/lib/*/dist-packages/sdurw_opengl/_sdurw_opengl*.so
+usr/lib/*/dist-packages/sdurw_opengl/__init__.py

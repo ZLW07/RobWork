@@ -1,0 +1,57 @@
+.TH ROBWORKSTUDIO 1 "16 May 2019" "0.7" "RobWorkStudio man page"
+.SH NAME
+RobWorkStudio \- a GUI for the RobWork framework
+.SH SYNOPSIS
+.B RobWorkStudio
+[options] <project-file>
+.br
+.B RobWorkStudio
+[options] <workcell-file>
+.br
+.B RobWorkStudio
+[options] <device-file>
+.SH DESCRIPTION
+RobWorkStudio is the GUI for RobWork.
+.SH OPTIONS
+.TP
+.BR \-\-help
+Produce help message.
+.TP
+.BR \-\-rwloglevel " " \fIarg\fP
+Set to debug, info (default if not given), error, fatal
+.TP
+.BR \-\-rwplugin " " \fIarg\fP
+Specific RobWork plugins or plugin directories to load.
+.TP
+.BR \-\-rwroot " " \fIarg\fP
+/fB--rwroot arg/fP
+Directory of RobWork installation or development environment.
+.TP
+.BR \-\-ini-file " " \fIarg\fP
+RobWorkStudio ini-file (default is RobWorkStudio.ini)
+.TP
+.BR \-\-input-file " " \fIarg\fP
+Project/Workcell/Device input file
+.TP
+.BR \-\-nosplash " " \fIarg\fP
+If defined the splash screen will not be shown
+.TP
+.BR \-v ", " \-\-version
+print version string
+.TP
+.BR \-i ", " \-\-intproperty " " \fIarg\fP
+Add a int property, -iname=2
+.TP
+.BR \-d ", " \-\-doubleproperty " " \fIarg\fP
+Add a double property, -dname=2.3
+.TP
+.BR \-q ", " \-\-qproperty " " \fIarg\fP
+Add a Q property, eg. -qname="(1.0,2,32.1,2)"
+Remember the quotes!!!
+.TP
+.BR \-P ", " \-\-property " " \fIarg\fP
+Add a string property, -Pname=pstring
+.SH BUGS
+Please see https://gitlab.com/sdurobotics/RobWork/issues for a list of known bugs.
+.SH AUTHOR
+SDU Robotics (sdur-software@tek.sdu.dk)

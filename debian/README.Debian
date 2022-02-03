@@ -1,0 +1,8 @@
+robwork for Debian
+-----------------
+
+This packaging provides the RobWork libraries as individual packages.
+
+Please see http://robwork.org for more information about RobWork.
+
+ -- Kasper Høj Lorenzen <kalor@mmmi.sdu.dk>  Wed, 28 Aug 2019 10:00:00 +0200

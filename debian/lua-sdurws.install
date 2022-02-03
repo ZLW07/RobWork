@@ -1,0 +1,5 @@
+usr/lib/*/lua/[0-9].[0-9]/sdurws.so
+usr/lib/*/RobWork/rwplugins/libsdurwslua_plugin.rwplugin.so
+usr/lib/*/RobWork/static/libsdurws_lua_s.a
+usr/share/robworkstudio-*/cmake/RobWorkStudioluaTargets.cmake
+usr/share/robworkstudio-*/cmake/RobWorkStudioluaTargets-none.cmake
