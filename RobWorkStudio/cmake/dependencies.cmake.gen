@@ -1,0 +1,59 @@
+
+# -------------------------------------------------------------------------
+# this is used to set up installation of dlls/so's that RobWorkStudio 
+# depends on
+
+IF(DEFINED WIN32)
+	
+	SET(DEPENDENCIES "QtCore4.dll" "QtGui4.dll" "QtOpenGL4.dll" "QtDesigner4.dll" "QtXml4.dll"
+				     "QtScript4.dll" "qmake.exe" "moc.exe" "uic.exe" "rcc.exe")
+	MESSAGE("Setting install dependencies:${DEPENDENCIES} " )
+	#IF(DEFINED  AND NOT TRUE)
+	#	LIST(APPEND DEPENDENCIES "mingwm10.dll")
+	#ENDIF()
+ENDIF()
+
+FOREACH(DEPENDENCY ${DEPENDENCIES})
+	UNSET(DEPENDENCY_PATH CACHE)
+	FIND_FILE(DEPENDENCY_PATH "${DEPENDENCY}" 
+			  HINTS 
+			  
+			  
+			  )
+	FILE(INSTALL "${DEPENDENCY_PATH}" DESTINATION "${CMAKE_INSTALL_PREFIX}/bin")
+	MESSAGE("Install :${DEPENDENCY_PATH} " )
+ENDFOREACH()
+UNSET(DEPENDENCY_PATH CACHE)
+
+SET(DEPENDS_DIRS 
+    "/home/zw/CLionProjects/RobWork/cmake-build-debug/RobWorkStudio/libs/debug"
+    "/home/zw/CLionProjects/RobWork/cmake-build-debug/RobWorkStudio/bin/debug"
+    
+    
+)
+
+SET(target "$<TARGET_FILE:RobWorkStudio>")
+SET(EXEPATH "/home/zw/CLionProjects/RobWork/cmake-build-debug/RobWorkStudio/bin/debug")
+
+INCLUDE(InstallRequiredSystemLibraries)
+INCLUDE(GetPrerequisites OPTIONAL RESULT_VARIABLE has_prereq)
+IF( has_prereq )
+    GET_PREREQUISITES("${target}" DEPS 1 1 ${EXEPATH} "")
+    MESSAGE(STATUS "DEPENDENCIES=${DEPS}")
+    
+    FOREACH(DEPENDENCY ${DEPS})
+	
+		FIND_FILE(DEPENDENCY_PATH "${DEPENDENCY}")
+		message("Dep: ${DEPENDENCY}")
+		message("path: ${DEPENDENCY_PATH}")
+		
+       GET_FILENAME_COMPONENT(DEPENDENCY_NAME "${DEPENDENCY}" NAME)
+       GET_FILENAME_COMPONENT(DEPENDENCY_ACTUAL "${DEPENDENCY}" REALPATH)
+       FILE(INSTALL
+         DESTINATION "${CMAKE_INSTALL_PREFIX}/bin"
+         TYPE EXECUTABLE
+         RENAME "${DEPENDENCY_NAME}"
+         FILES "${DEPENDENCY_ACTUAL}"
+         )
+    ENDFOREACH()
+ENDIF()

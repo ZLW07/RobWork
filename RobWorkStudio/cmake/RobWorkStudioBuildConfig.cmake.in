@@ -1,0 +1,39 @@
+
+# ######################################################################################################################
+# Version of RobWork
+
+set(RWS_BUILD_WITH_VERSION @ROBWORKSTUDIO_VERSION@)
+set(RWS_BUILD_WITH_VERSION_MAJOR @ROBWORKSTUDIO_VERSION_MAJOR@)
+set(RWS_BUILD_WITH_VERSION_MINOR @ROBWORKSTUDIO_VERSION_MINOR@)
+set(RWS_BUILD_WITH_VERSION_PATCH @ROBWORKSTUDIO_VERSION_PATCH@)
+
+# ######################################################################################################################
+# dependencies
+set(RWS_BUILD_WITH_LUA @RWS_HAVE_LUA@)
+
+set(RWS_BUILD_WITH_PYTHON @RWS_USE_PYTHON@)
+set(RWS_BUILD_WITH_PYTHON_MAJOR_VERSION @PYTHON_VERSION_MAJOR@)
+set(RWS_BUILD_WITH_PYTHONLIBS_MAJOR_VERSION @PYTHONLIBS_VERSION_MAJOR@)
+
+set(RWS_BUILD_WITH_FREEGLUT @RWS_HAVE_FREEGLUT@)
+
+set(RWS_BUILD_WITH_BOOST_LIBRARY_DIR "@Boost_LIBRARY_DIRS@")
+
+# ######################################################################################################################
+# flags and definitions
+set(RWS_BUILD_WITH_RWS_ROOT "@RWS_ROOT@")
+set(RWS_BUILD_WITH_RW_ROOT "@RW_ROOT@")
+set(RWS_BUILD_WITH_CXX_FLAGS "@RWS_CXX_FLAGS@")
+set(RWS_BUILD_WITH_DEFINITIONS @RWS_DEFINITIONS@)
+set(RWS_BUILD_WITH_LINKER_FLAGS @RWS_LINKER_FLAGS@)
+set(RWS_BUILD_WITH_BUILD_DIR "@CMAKE_CURRENT_BINARY_DIR@")
+
+# ######################################################################################################################
+# and libraries
+set(RWS_BUILD_WITH_LIBRARIES "@ROBWORKSTUDIO_LIBRARIES_INTERNAL@")
+set(RWS_BUILD_WITH_LIB_DEPEND "@ROBWORKSTUDIO_LIBRARIES_EXTERNAL@")
+set(RWS_BUILD_WITH_PLUGIN_LIBRARIES "@ROBWORKSTUDIO_PLUGIN_LIBRARIES@")
+
+set(RWS_BUILD_WITH_LIBRARY_DIRS "@ROBWORKSTUDIO_LIBRARY_DIRS@")
+set(RWS_BUILD_WITH_LIBRARY_SUBDIRS "x86_64-linux-gnu" "x86_64-linux-gnu/RobWork" "x86_64-linux-gnu/RobWork/rwsplugins" "RobWork" "RobWork/rwsplugins" "x86_64-linux-gnu/RobWork/static" "RobWork/static")
+set(RWS_BUILD_WITH_INCLUDE_DIR "@ROBWORKSTUDIO_INCLUDE_DIR@")

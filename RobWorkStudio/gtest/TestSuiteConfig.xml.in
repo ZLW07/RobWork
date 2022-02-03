@@ -1,0 +1,3 @@
+<RobWorkStudioTest>
+	<TestfilesDIR>@ROBWORKSTUDIO_TESTFILES_DIR@</TestfilesDIR>
+</RobWorkStudioTest>

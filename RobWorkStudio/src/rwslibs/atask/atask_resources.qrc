@@ -1,0 +1,5 @@
+<!DOCTYPE RCC><RCC version="1.0">
+<qresource prefix="/assemblytaskvisplugin">
+<file>atask_icon.png</file>
+</qresource>
+</RCC>

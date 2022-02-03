@@ -1,0 +1,9 @@
+[Plugins]
+
+UserPlugin\DockArea=2
+UserPlugin\Filename=library_filename_without_extension
+UserPlugin\Path=unix_style_path_to_library
+UserPlugin\Visible=true
+
+[Settings]
+Workcell\Path=path/to/workcell.xml

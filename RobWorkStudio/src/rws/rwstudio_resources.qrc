@@ -1,0 +1,72 @@
+<RCC>
+    <qresource prefix="/" >
+        <file>../images/close.png</file>
+        <file>../images/collapse_all.png</file>
+        <file>../images/collision.png</file>
+        <file>../images/device.png</file>
+        <file>../images/drawable.png</file>
+        <file>../images/expand_all.png</file>
+        <file>../images/larger_frameaxis.png</file>
+        <file>../images/smaller_frameaxis.png</file>
+        <file>../images/frame.png</file>
+        <file>../images/jog.png</file>
+        <file>../images/joint.png</file>
+        <file>../images/link.png</file>
+        <file>../images/new.png</file>
+        <file>../images/open.png</file>
+        <file>../images/outline.png</file>
+        <file>../images/pivotpoint.png</file>
+        <file>../images/rw_logo_64x64.png</file>
+        <file>../images/solid.png</file>
+        <file>../images/splash.jpg</file>
+        <file>../images/transparent.png</file>
+        <file>../images/treeview.png</file>
+        <file>../images/usermodule.png</file>
+        <file>../images/wireframe.png</file>
+        <file>../images/workcell.png</file>
+        <file>../images/reload.png</file>
+        <file>../images/save.png</file>
+        
+        <file>../images/home.png</file>
+        <file>../images/front_view_100.png</file>
+        <file>../images/default_view_100.png</file>
+        <file>../images/left_view_100.png</file>
+        <file>../images/right_view_100.png</file>
+        <file>../images/top_view_100.png</file>
+        <file>../images/bottom_view_100.png</file>
+        <file>../images/rear_view_100.png</file>
+
+	    <file>../images/zoom_auto.png</file>
+	    <file>../images/zoom_in.png</file>
+	    <file>../images/zoom_out.png</file>
+        
+        <file alias="PyPlugin.py">./pythonpluginloader/PyPlugin.py</file>
+        <file alias="jog.png" >../rwslibs/jog/jog.png</file>
+        <file alias="log.png" >../rwslibs/log/log.png</file>
+        <file alias="backward.png" >../rwslibs/playback/backward.png</file>
+        <file alias="end.png" >../rwslibs/playback/end.png</file>
+        <file alias="fileopen.png" >../rwslibs/playback/fileopen.png</file>
+        <file alias="filesave.png" >../rwslibs/playback/filesave.png</file>
+        <file alias="forward.png" >../rwslibs/playback/forward.png</file>
+        <file alias="forward_pause.png" >../rwslibs/playback/forward_pause.png</file>
+        <file alias="backward_pause.png" >../rwslibs/playback/backward_pause.png</file>
+        <file alias="pause.png" >../rwslibs/playback/pause.png</file>
+        <file alias="playback.png" >../rwslibs/playback/playback.png</file>
+        <file alias="record_images.png" >../rwslibs/playback/record_images.png</file>
+        <file alias="reload.png" >../rwslibs/playback/reload.png</file>
+        <file alias="settings.png" >../rwslibs/playback/settings.png</file>
+        <file alias="start.png" >../rwslibs/playback/start.png</file>
+        <file alias="stop.png" >../rwslibs/playback/stop.png</file>
+        <file alias="propertyview.png" >../rwslibs/propertyview/propertyview.png</file>
+        <file alias="treeview.png" >../rwslibs/treeview/treeview.png</file>
+        <file alias="planning.png" >../rwslibs/planning/planning.png</file>
+        <file alias="lua.png">../rwslibs/lua/lua.png</file>
+        <file alias="wceditoricon.png">../rwslibs/workcelleditorplugin/wceditoricon.png</file>
+        <file alias="sensors.png" >../rwslibs/sensors/sensors.png</file>
+		<file alias="wordlist.txt">../rwslibs/luaeditor/wordlist.txt</file>
+        <file alias="word_list.txt">../rwslibs/workcelleditor/word_list.txt</file>
+        <file alias="PythonIcon.png">../images/PythonIcon.png</file>
+        <file alias="rwxml_workcell.xsd">../../../RobWork/xml-schemas/rwxml_workcell.xsd</file>
+
+    </qresource>
+</RCC>

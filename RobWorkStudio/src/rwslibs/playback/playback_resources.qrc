@@ -1,0 +1,18 @@
+<!DOCTYPE RCC><RCC version="1.0">
+<qresource>
+<file>fileopen.png</file>
+<file>filesave.png</file>
+<file>playback.png</file>
+<file>pause.png</file>
+<file>forward.png</file>
+<file>backward.png</file>
+<file>forward_pause.png</file>
+<file>backward_pause.png</file>
+<file>start.png</file>
+<file>end.png</file>
+<file>reload.png</file>
+<file>record_images.png</file>
+<file>settings.png</file>
+</qresource>
+</RCC>
+ 

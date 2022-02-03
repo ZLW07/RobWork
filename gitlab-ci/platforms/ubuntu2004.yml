@@ -1,0 +1,95 @@
+########################## Ubuntu 2004 (MAIN) ################################
+
+build-RW:ubuntu-2004:
+  extends: .linux-build-RW
+  image: registry.gitlab.com/sdurobotics/docker-images/robwork-build:ubuntu-2004
+
+build-RWS:ubuntu-2004:
+  extends: .linux-build-RWS
+  dependencies:
+    - build-RW:ubuntu-2004
+  needs: ["build-RW:ubuntu-2004"]
+  image: registry.gitlab.com/sdurobotics/docker-images/robwork-build:ubuntu-2004
+
+build-RWSim:ubuntu-2004:
+  extends: .linux-build-RWSim
+  dependencies:
+    - build-RW:ubuntu-2004
+    - build-RWS:ubuntu-2004
+  needs: ["build-RW:ubuntu-2004", "build-RWS:ubuntu-2004"]
+  image: registry.gitlab.com/sdurobotics/docker-images/robwork-build:ubuntu-2004
+
+examples:ubuntu-2004:
+  extends: .linux-examples
+  dependencies:
+    - build-RW:ubuntu-2004
+    - build-RWS:ubuntu-2004
+    - build-RWSim:ubuntu-2004
+  needs:
+    [
+      "build-RW:ubuntu-2004",
+      "build-RWS:ubuntu-2004",
+      "build-RWSim:ubuntu-2004",
+    ]
+  image: registry.gitlab.com/sdurobotics/docker-images/robwork-build:ubuntu-2004
+
+tests:ubuntu-2004:
+  extends: .linux-tests
+  dependencies:
+    - build-RW:ubuntu-2004
+    - build-RWS:ubuntu-2004
+    - build-RWSim:ubuntu-2004
+  needs:
+    [
+      "build-RW:ubuntu-2004",
+      "build-RWS:ubuntu-2004",
+      "build-RWSim:ubuntu-2004",
+    ]
+  image: registry.gitlab.com/sdurobotics/docker-images/robwork-build:ubuntu-2004
+
+python-tests:ubuntu-2004:
+  extends: .linux-python-tests
+  dependencies:
+    - build-RW:ubuntu-2004
+    - build-RWS:ubuntu-2004
+    - build-RWSim:ubuntu-2004
+  needs:
+    [
+      "build-RW:ubuntu-2004",
+      "build-RWS:ubuntu-2004",
+      "build-RWSim:ubuntu-2004",
+    ]
+  image: registry.gitlab.com/sdurobotics/docker-images/robwork-build:ubuntu-2004
+
+
+install-tests:ubuntu-2004:
+  extends: .linux-install-tests
+  dependencies:
+    - build-RW:ubuntu-2004
+    - build-RWS:ubuntu-2004
+    - build-RWSim:ubuntu-2004
+  needs:
+    [
+      "build-RW:ubuntu-2004",
+      "build-RWS:ubuntu-2004",
+      "build-RWSim:ubuntu-2004",
+    ]
+  image: registry.gitlab.com/sdurobotics/docker-images/robwork-build:ubuntu-2004
+
+build-debian:ubuntu-2004:
+  extends: .linux-build-debian
+  image: registry.gitlab.com/sdurobotics/docker-images/robwork-build:ubuntu-2004-deb
+
+test-debian:ubuntu-2004:
+  extends: .linux-test-debian
+  image: registry.gitlab.com/sdurobotics/docker-images/robwork-build:ubuntu-2004-deb-test
+  dependencies:
+    - "build-debian:ubuntu-2004"
+  needs: ["build-debian:ubuntu-2004"]
+
+test-debian-upgrade:ubuntu-2004:
+  extends: .linux-debian-upgrade-test
+  image: registry.gitlab.com/sdurobotics/docker-images/robwork-build:ubuntu-2004-deb-test
+  dependencies:
+    - build-debian:ubuntu-2004
+  needs: ["build-debian:ubuntu-2004"]
