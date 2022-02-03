@@ -1,0 +1,17 @@
+#!/usr/bin/env python3
+
+"""
+setup.py file for SWIG example
+"""
+
+from distutils.core import setup, Extension
+
+
+setup (name = 'sdurw',
+       version = '@ROBWORK_VERSION@',
+       author = "RobWork",
+       description = """Install precompiled extension""",
+       py_modules = ["sdurw"],
+       package_dir={"RobWork": '@CMAKE_LIBRARY_OUTPUT_DIRECTORY@'},
+       package_data={"RobWork": ["_sdurw*@LIB_SUFIX@.so"]}
+)

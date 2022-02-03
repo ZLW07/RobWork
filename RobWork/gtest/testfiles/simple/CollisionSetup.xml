@@ -1,0 +1,22 @@
+<CollisionSetup>
+  <Exclude>
+    <FramePair first="Cylinder-1" second="PA10.Joint1"/>
+    <FramePair first="Cylinder-1" second="PA10.Joint2"/>
+    <FramePair first="Cylinder-1" second="Floor"/>
+    <FramePair first="Cylinder-1" second="Wall-1"/>
+    <FramePair first="Cylinder-1" second="Wall-2"/>
+    <FramePair first="PA10.Joint1" second="Floor"/>
+    <FramePair first="PA10.Joint1" second="Wall-1"/>
+    <FramePair first="PA10.Joint1" second="Wall-2"/>
+    <FramePair first="PA10.Joint2" second="Floor"/>
+    <FramePair first="PA10.Joint2" second="Wall-1"/>
+    <FramePair first="PA10.Joint2" second="Wall-2"/>
+    <FramePair first="PA10.Joint3" second="Floor"/>
+    <FramePair first="PA10.Joint4" second="Floor"/>
+    <FramePair first="Floor" second="Wall-1"/>
+    <FramePair first="Floor" second="Wall-2"/>
+    <FramePair first="Wall-1" second="Wall-2"/>
+    <FramePair first="Floor" second="PA10.Base" />
+    <FramePair first="Floor" second="Cylinder-1" />
+  </Exclude>
+</CollisionSetup>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+	<xs:include schemaLocation="rwxml_math.xsd" />
+	<xs:include schemaLocation="rwxml_property.xsd" />
+
+	<!-- Generic Types -->
+
+	<xs:simpleType name="motion_type_type">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Linear" />
+			<xs:enumeration value="P2P" />
+			<xs:enumeration value="Circular" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:group name="entity_group">
+		<xs:all>
+			<xs:element name="Index" type="xs:int" minOccurs="0" maxOccurs="1" default="-1" />
+			<xs:element name="Id" type="xs:string" minOccurs="0" maxOccurs="1" default="" />
+			<xs:element name="PropertyMap" type="propertymap_type" minOccurs="0" maxOccurs="1" />
+		</xs:all>
+	</xs:group>
+
+	<xs:complexType name="action_type">
+		<xs:group ref="entity_group" />
+		<xs:attribute name="type" type="xs:int" use="required" />
+	</xs:complexType>
+
+	<xs:complexType name="motion_type">
+		<xs:all>
+			<xs:element name="Start" type="xs:string" minOccurs="0" maxOccurs="1" default="" />
+			<xs:element name="Mid" type="xs:string" minOccurs="0" maxOccurs="1" default="" />
+			<xs:element name="End" type="xs:string" minOccurs="0" maxOccurs="1" default="" />
+			<xs:element name="Index" type="xs:int" minOccurs="0" maxOccurs="1" default="-1" />
+			<xs:element name="Id" type="xs:string" minOccurs="0" maxOccurs="1" default="" />
+			<xs:element name="PropertyMap" type="propertymap_type" minOccurs="0" maxOccurs="1" />
+		</xs:all>
+		<xs:attribute name="type" type="motion_type_type" use="required" />
+	</xs:complexType>
+
+	<xs:complexType name="augmentations_type">
+		<xs:choice maxOccurs="unbounded">
+			<xs:element name="QTask" type="q_task_type" minOccurs="0" maxOccurs="unbounded" />
+			<xs:element name="CartesianTask" type="t3d_task_type" minOccurs="0" maxOccurs="unbounded" />
+		</xs:choice>
+	</xs:complexType>
+
+	<!-- Types for Q -->
+
+	<xs:complexType name="q_entities_type">
+		<xs:choice maxOccurs="unbounded">
+			<xs:element name="Action" type="action_type" minOccurs="0" maxOccurs="unbounded" />
+			<xs:element name="Motion" type="motion_type" minOccurs="0" maxOccurs="unbounded" />
+			<xs:element name="QTask" type="q_task_type" minOccurs="0" maxOccurs="unbounded" />
+		</xs:choice>
+	</xs:complexType>
+
+	<xs:complexType name="q_target_type">
+		<xs:all>
+			<xs:element name="Q" type="q_type" minOccurs="0" maxOccurs="1" />
+			<xs:element name="Index" type="xs:int" minOccurs="0" maxOccurs="1" default="-1" />
+			<xs:element name="Id" type="xs:string" minOccurs="0" maxOccurs="1" default="" />
+			<xs:element name="PropertyMap" type="propertymap_type" minOccurs="0" maxOccurs="1" />
+		</xs:all>
+		<xs:attribute name="id" type="xs:string" use="required" />
+	</xs:complexType>
+
+	<xs:complexType name="q_targets_type">
+		<xs:sequence>
+			<xs:element name="QTarget" type="q_target_type" minOccurs="2" maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:group name="q_task_group">
+		<xs:all>
+			<xs:element name="Targets" type="q_targets_type" minOccurs="0" maxOccurs="1" />
+			<xs:element name="Entities" type="q_entities_type" minOccurs="0" maxOccurs="1" />
+			<xs:element name="Augmentations" type="augmentations_type" minOccurs="0" maxOccurs="1" />
+			<xs:element name="Index" type="xs:int" minOccurs="0" maxOccurs="1" default="-1" />
+			<xs:element name="Id" type="xs:string" minOccurs="0" maxOccurs="1" default="" />
+			<xs:element name="PropertyMap" type="propertymap_type" minOccurs="0" maxOccurs="1" />
+		</xs:all>
+	</xs:group>
+
+	<xs:complexType name="q_task_type">
+		<xs:group ref="q_task_group" />
+	</xs:complexType>
+
+	<!-- Types for Transform3D -->
+
+	<xs:complexType name="t3d_entities_type">
+		<xs:choice maxOccurs="unbounded">
+			<xs:element name="Action" type="action_type" minOccurs="0" maxOccurs="unbounded" />
+			<xs:element name="Motion" type="motion_type" minOccurs="0" maxOccurs="unbounded" />
+			<xs:element name="CartesianTask" type="t3d_task_type" minOccurs="0" maxOccurs="unbounded" />
+		</xs:choice>
+	</xs:complexType>
+
+	<xs:complexType name="t3d_target_type">
+		<xs:all>
+			<xs:element name="Transform3D" type="transform3d_type" minOccurs="0" maxOccurs="1" />
+			<xs:element name="Index" type="xs:int" minOccurs="0" maxOccurs="1" default="-1" />
+			<xs:element name="Id" type="xs:string" minOccurs="0" maxOccurs="1" default="" />
+			<xs:element name="PropertyMap" type="propertymap_type" minOccurs="0" maxOccurs="1" />
+		</xs:all>
+		<xs:attribute name="id" type="xs:string" use="required" />
+	</xs:complexType>
+
+	<xs:complexType name="t3d_targets_type">
+		<xs:sequence>
+			<xs:element name="CartesianTarget" type="t3d_target_type" minOccurs="2" maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:group name="t3d_task_group">
+		<xs:all>
+			<xs:element name="Targets" type="t3d_targets_type" minOccurs="0" maxOccurs="1" />
+			<xs:element name="Entities" type="t3d_entities_type" minOccurs="0" maxOccurs="1" />
+			<xs:element name="Augmentations" type="augmentations_type" minOccurs="0" maxOccurs="1" />
+			<xs:element name="Index" type="xs:int" minOccurs="0" maxOccurs="1" default="-1" />
+			<xs:element name="Id" type="xs:string" minOccurs="0" maxOccurs="1" default="" />
+			<xs:element name="PropertyMap" type="propertymap_type" minOccurs="0" maxOccurs="1" />
+		</xs:all>
+	</xs:group>
+
+	<xs:complexType name="t3d_task_type">
+		<xs:group ref="t3d_task_group" />
+	</xs:complexType>
+
+	<!-- Definition of overall Task types -->
+
+	<xs:element name="QTask" type="q_task_type" />
+
+	<xs:element name="CartesianTask" type="t3d_task_type" />
+
+</xs:schema>

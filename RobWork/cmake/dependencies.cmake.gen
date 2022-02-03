@@ -1,0 +1,45 @@
+# -------------------------------------------------------------------------
+# this is used to set up installation of dlls/so's to the RobWork dir
+# depends on
+
+IF(DEFINED WIN32)
+	SET(DEPENDENCIES "")
+	IF(DEFINED MINGW AND NOT TRUE)
+		LIST(APPEND DEPENDENCIES "libgcc_s_dw2-1.dll")
+	ENDIF()
+ENDIF()
+
+FOREACH(DEPENDENCY ${DEPENDENCIES})
+	UNSET(DEPENDENCY_PATH CACHE)
+	FIND_FILE(DEPENDENCY_PATH "${DEPENDENCY}")
+	FILE(INSTALL "${DEPENDENCY_PATH}" DESTINATION "${CMAKE_INSTALL_PREFIX}/bin")
+ENDFOREACH()
+UNSET(DEPENDENCY_PATH CACHE)
+
+RETURN()
+
+SET(DEPENDS_DIRS 
+    "/home/zw/CLionProjects/RobWork/cmake-build-debug/RobWork/libs/debug"
+    "/home/zw/CLionProjects/RobWork/cmake-build-debug/RobWork/bin/debug"
+)
+
+SET(target "$<TARGET_FILE:sdurw_loader-test>")
+SET(EXEPATH "/home/zw/CLionProjects/RobWork/cmake-build-debug/RobWork/bin/debug")
+
+INCLUDE(InstallRequiredSystemLibraries)
+INCLUDE(GetPrerequisites OPTIONAL RESULT_VARIABLE has_prereq)
+IF( has_prereq )
+    GET_PREREQUISITES("${target}" DEPENDENCIES 1 1 ${EXEPATH} "")
+    MESSAGE(STATUS "DEPENDENCIES=${DEPENDENCIES}")
+    
+    FOREACH(DEPENDENCY ${DEPENDENCIES})		
+       GET_FILENAME_COMPONENT(DEPENDENCY_NAME "${DEPENDENCY}" NAME)
+       GET_FILENAME_COMPONENT(DEPENDENCY_ACTUAL "${DEPENDENCY}" REALPATH)
+       FILE(INSTALL
+         DESTINATION "${CMAKE_INSTALL_PREFIX}/bin"
+         TYPE EXECUTABLE
+         RENAME "${DEPENDENCY_NAME}"
+         FILES "${DEPENDENCY_ACTUAL}"
+         )
+    ENDFOREACH()
+ENDIF()

@@ -1,0 +1,602 @@
+#####################################
+# only message if this is an install
+function(DEBUG_MESSAGE text)
+    if(DEBUG)
+        message(STATUS ${text})
+    endif()
+endfunction()
+
+#####################################
+# Find buildtype of project and correct it if wrong assumption is made
+
+macro(GET_@ROBWORK_PROJECT_NAME@_BUILD_TYPE CFG_ROOT @PROJECT_PREFIX@_BUILD_TYPE)
+    # defaults to release
+    set(BTYPE_TMP release)
+    if(CMAKE_BUILD_TYPE)
+        string(TOLOWER ${CMAKE_BUILD_TYPE} BTYPE_TMP)
+    else()
+        set(BTYPE_TMP "none")
+    endif()
+
+    # first test if the correct cmake build type is installed
+    if(EXISTS ${CFG_ROOT}/@ROBWORK_PROJECT_NAME@BuildConfig_${BTYPE_TMP}.cmake)
+        set(${@PROJECT_PREFIX@_BUILD_TYPE} ${BTYPE_TMP})
+    else()
+
+        # find best @ROBWORK_PROJECT_NAME@ build match
+        if(${BTYPE_TMP} STREQUAL "release")
+            # find release compatible @ROBWORK_PROJECT_NAME@ installation
+            if(EXISTS ${CFG_ROOT}/@ROBWORK_PROJECT_NAME@BuildConfig_minsizerel.cmake)
+                set(${@PROJECT_PREFIX@_BUILD_TYPE} minsizerel)
+            elseif(EXISTS ${CFG_ROOT}/@ROBWORK_PROJECT_NAME@BuildConfig_relwithdebinfo.cmake)
+                set(${@PROJECT_PREFIX@_BUILD_TYPE} relwithdebinfo)
+            elseif(EXISTS ${CFG_ROOT}/@ROBWORK_PROJECT_NAME@BuildConfig_debug.cmake)
+                set(${@PROJECT_PREFIX@_BUILD_TYPE} debug)
+            elseif(EXISTS ${CFG_ROOT}/@ROBWORK_PROJECT_NAME@BuildConfig_none.cmake)
+                set(${@PROJECT_PREFIX@_BUILD_TYPE} none)
+            else()
+                message(FATAL_ERROR "Could not find any build of @ROBWORK_PROJECT_NAME@!")
+            endif()
+        elseif(${BTYPE_TMP} STREQUAL "minsizerel")
+            if(EXISTS ${CFG_ROOT}/@ROBWORK_PROJECT_NAME@BuildConfig_release.cmake)
+                set(${@PROJECT_PREFIX@_BUILD_TYPE} release)
+            elseif(EXISTS ${CFG_ROOT}/@ROBWORK_PROJECT_NAME@BuildConfig_relwithdebinfo.cmake)
+                set(${@PROJECT_PREFIX@_BUILD_TYPE} relwithdebinfo)
+            elseif(EXISTS ${CFG_ROOT}/@ROBWORK_PROJECT_NAME@BuildConfig_debug.cmake)
+                set(${@PROJECT_PREFIX@_BUILD_TYPE} debug)
+            elseif(EXISTS ${CFG_ROOT}/@ROBWORK_PROJECT_NAME@BuildConfig_none.cmake)
+                set(${@PROJECT_PREFIX@_BUILD_TYPE} none)
+            else()
+                message(FATAL_ERROR "Could not find any build of @ROBWORK_PROJECT_NAME@!")
+            endif()
+        elseif(${BTYPE_TMP} STREQUAL "relwithdebinfo")
+            if(EXISTS ${CFG_ROOT}/@ROBWORK_PROJECT_NAME@BuildConfig_release.cmake)
+                set(${@PROJECT_PREFIX@_BUILD_TYPE} release)
+            elseif(EXISTS ${CFG_ROOT}/@ROBWORK_PROJECT_NAME@BuildConfig_minsizerel.cmake)
+                set(${@PROJECT_PREFIX@_BUILD_TYPE} minsizerel)
+            elseif(EXISTS ${CFG_ROOT}/@ROBWORK_PROJECT_NAME@BuildConfig_debug.cmake)
+                set(${@PROJECT_PREFIX@_BUILD_TYPE} debug)
+            elseif(EXISTS ${CFG_ROOT}/@ROBWORK_PROJECT_NAME@BuildConfig_none.cmake)
+                set(${@PROJECT_PREFIX@_BUILD_TYPE} none)
+            else()
+                message(FATAL_ERROR "Could not find any build of @ROBWORK_PROJECT_NAME@!")
+            endif()
+        elseif(${BTYPE_TMP} STREQUAL "debug")
+            if(EXISTS ${CFG_ROOT}/@ROBWORK_PROJECT_NAME@BuildConfig_relwithdebinfo.cmake)
+                set(${@PROJECT_PREFIX@_BUILD_TYPE} relwithdebinfo)
+            elseif(EXISTS ${CFG_ROOT}/@ROBWORK_PROJECT_NAME@BuildConfig_minsizerel.cmake)
+                set(${@PROJECT_PREFIX@_BUILD_TYPE} minsizerel)
+            elseif(EXISTS ${CFG_ROOT}/@ROBWORK_PROJECT_NAME@BuildConfig_release.cmake)
+                set(${@PROJECT_PREFIX@_BUILD_TYPE} release)
+            elseif(EXISTS ${CFG_ROOT}/@ROBWORK_PROJECT_NAME@BuildConfig_none.cmake)
+                set(${@PROJECT_PREFIX@_BUILD_TYPE} none)
+            else()
+                message(FATAL_ERROR "Could not find any build of @ROBWORK_PROJECT_NAME@!")
+            endif()
+        elseif(${BTYPE_TMP} STREQUAL "none")
+            if(EXISTS ${CFG_ROOT}/@ROBWORK_PROJECT_NAME@BuildConfig_relwithdebinfo.cmake)
+                set(${@PROJECT_PREFIX@_BUILD_TYPE} relwithdebinfo)
+            elseif(EXISTS ${CFG_ROOT}/@ROBWORK_PROJECT_NAME@BuildConfig_minsizerel.cmake)
+                set(${@PROJECT_PREFIX@_BUILD_TYPE} minsizerel)
+            elseif(EXISTS ${CFG_ROOT}/@ROBWORK_PROJECT_NAME@BuildConfig_debug.cmake)
+                set(${@PROJECT_PREFIX@_BUILD_TYPE} debug)
+            elseif(EXISTS ${CFG_ROOT}/@ROBWORK_PROJECT_NAME@BuildConfig_release.cmake)
+                set(${@PROJECT_PREFIX@_BUILD_TYPE} release)
+            else()
+                message(FATAL_ERROR "Could not find any build of @ROBWORK_PROJECT_NAME@!")
+            endif()
+        else()
+            message(
+                STATUS
+                    "Does not recognize build type: ${CMAKE_BUILD_TYPE} choosing any existing @ROBWORK_PROJECT_NAME@ installation!"
+            )
+            if(EXISTS ${CFG_ROOT}/@ROBWORK_PROJECT_NAME@BuildConfig_release.cmake)
+                set(${@PROJECT_PREFIX@_BUILD_TYPE} release)
+            elseif(EXISTS ${CFG_ROOT}/@ROBWORK_PROJECT_NAME@BuildConfig_minsizerel.cmake)
+                set(${@PROJECT_PREFIX@_BUILD_TYPE} minsizerel)
+            elseif(EXISTS ${CFG_ROOT}/@ROBWORK_PROJECT_NAME@BuildConfig_relwithdebinfo.cmake)
+                set(${@PROJECT_PREFIX@_BUILD_TYPE} relwithdebinfo)
+            elseif(EXISTS ${CFG_ROOT}/@ROBWORK_PROJECT_NAME@BuildConfig_debug.cmake)
+                set(${@PROJECT_PREFIX@_BUILD_TYPE} debug)
+            elseif(EXISTS ${CFG_ROOT}/@ROBWORK_PROJECT_NAME@BuildConfig_none.cmake)
+                set(${@PROJECT_PREFIX@_BUILD_TYPE} none)
+            else()
+                message(FATAL_ERROR "Could not find any build of @ROBWORK_PROJECT_NAME@!")
+            endif()
+        endif()
+
+        message(
+            STATUS
+                "warning: @ROBWORK_PROJECT_NAME@ was not compiled with type:${BTYPE_TMP} using type:${${@ROBWORK_PROJECT_NAME@_BUILD_TYPE}} instead!"
+        )
+    endif()
+
+endmacro()
+
+#####################################
+# Checks if this configuration of @ROBWORK_PROJECT_NAME@ was installed by the windows exe installer
+function(@PROJECT_PREFIX@_IS_WINDOWS_INSTALL_BY_EXE CFG_ROOT return)
+    if(EXISTS ${CFG_ROOT}/../../@PROJECT_PREFIX@_uninstall.exe)
+        set(${return} TRUE PARENT_SCOPE)
+    else()
+        set(${return} FALSE PARENT_SCOPE)
+    endif()
+endfunction()
+
+#######################################
+# Correct the include dirs of a target
+macro(@PROJECT_PREFIX@_CORRECT_TARGET_INCLUDE_DIRS target)
+    get_target_property(include_dirs ${target} INTERFACE_INCLUDE_DIRECTORIES)
+    # message(STATUS "TARGET: ${target} input ${include_dirs}")
+    if(include_dirs)
+        foreach(dir ${include_dirs})
+
+            if(NOT EXISTS ${dir})
+                if("${dir}" MATCHES "boost")
+                    if(EXISTS "${@PROJECT_PREFIX@_INCLUDE_EXT}/boost")
+                        #message(STATUS "target ${target} replaces: ${dir} with ${@PROJECT_PREFIX@_INCLUDE_EXT}/boost")
+                        string(REPLACE "${dir}" "${@PROJECT_PREFIX@_INCLUDE_EXT}/boost" include_dirs "${include_dirs}")
+                    endif()
+                endif()
+                if("${dir}" MATCHES "eigen3")
+                    if(EXISTS "${@PROJECT_PREFIX@_INCLUDE_EXT}/Eigen")
+                        #message(STATUS "target ${target} replaces: ${dir} with ${@PROJECT_PREFIX@_INCLUDE_EXT}/Eigen")
+                        string(REPLACE "${dir}" "${@PROJECT_PREFIX@_INCLUDE_EXT}/Eigen" include_dirs "${include_dirs}")
+                    endif()
+                endif()
+                if("${dir}" MATCHES "XercesC")
+                    if(EXISTS "${@PROJECT_PREFIX@_INCLUDE_EXT}/xerces")
+                        #message(STATUS "target ${target} replaces: ${dir} with ${@PROJECT_PREFIX@_INCLUDE_EXT}/xerces")
+                        string(REPLACE "${dir}" "${@PROJECT_PREFIX@_INCLUDE_EXT}/xerces" include_dirs "${include_dirs}")
+                    endif()
+                endif()
+            endif()
+        endforeach()
+        #message(STATUS "output ${include_dirs}")
+        set_target_properties(${target} PROPERTIES INTERFACE_INCLUDE_DIRECTORIES "${include_dirs}")
+    endif()
+
+    
+endmacro()
+
+#######################################
+# Correct the dependencies of a target
+macro(@PROJECT_PREFIX@_CORRECT_TARGET_DEPENDENCIES target)
+    get_target_property(link_libs ${target} INTERFACE_LINK_LIBRARIES)
+    #message(STATUS "input ${link_libs}")
+    if(link_libs)
+        foreach(link ${link_libs})
+            if(NOT EXISTS ${link})
+                if("${link}" MATCHES "xerces-c")
+                    FILE(GLOB _lib "${@PROJECT_PREFIX@_LIBS}/xerces-c*")
+                    if(EXISTS "${_lib}")
+                        #message(STATUS "target ${target} replaces: ${dir} with ${@PROJECT_PREFIX@_INCLUDE_EXT}/xerces")
+                        string(REPLACE "${link}" "${_lib}" link_libs "${link_libs}")
+                    endif()
+                endif()
+            endif()
+        endforeach()
+        #message(STATUS "output ${link_libs}")
+        set_target_properties(${target} PROPERTIES INTERFACE_LINK_LIBRARIES "${link_libs}")
+    endif()
+endmacro()
+
+#####################################
+# Varify if a library exists
+function(@PROJECT_PREFIX@_VERIFY_LIBRARY _name _result)
+    if(NOT DEFINED DEBUG)
+        set(DEBUG FALSE)
+    endif()
+
+    set(result "")
+    string(REPLACE "${@PROJECT_PREFIX@_BUILD_WITH_BUILD_DIR}/libs/${@PROJECT_PREFIX@_BUILD_TYPE}" "${@PROJECT_PREFIX@_LIBS}" DIRS
+                   "${@PROJECT_PREFIX@_BUILD_WITH_LIBRARY_DIRS}"
+    )
+    string(REPLACE "//" "/" _name "${_name}")
+    string(REPLACE ">" "" _name "${_name}")
+    
+    list(REMOVE_DUPLICATES DIRS)
+    unset(tmp CACHE)
+    find_library(
+        tmp
+        NAMES ${_name} lib${_name}
+        PATHS ${DIRS}
+        PATH_SUFFIXES ${@PROJECT_PREFIX@_BUILD_WITH_LIBRARY_SUBDIRS}
+        NO_DEFAULT_PATH
+    )
+
+    if(${_name} MATCHES "^\\s?-l")
+        set(result ${_name})
+
+    elseif(EXISTS ${_name})
+        set(result ${_name})
+
+    elseif(TARGET ${_name})
+        set(result ${_name})
+        @PROJECT_PREFIX@_verify_target(${result} result ${ARGN})
+
+    elseif(TARGET RW::${_name})
+        set(result RW::${_name})
+        @PROJECT_PREFIX@_verify_target(${result} result ${ARGN})
+
+    elseif(TARGET sdurw_${_name})
+        set(result sdurw_${_name})
+        @PROJECT_PREFIX@_verify_target(${result} result ${ARGN})
+
+    elseif(TARGET RW::sdurw_${_name})
+        set(result RW::sdurw_${_name})
+        @PROJECT_PREFIX@_verify_target(${result} result ${ARGN})
+
+        elseif(TARGET RWS::${_name})
+        set(result RWS::${_name})
+        @PROJECT_PREFIX@_verify_target(${result} result ${ARGN})
+
+    elseif(TARGET sdurws_${_name})
+        set(result sdurws_${_name})
+        @PROJECT_PREFIX@_verify_target(${result} result ${ARGN})
+
+    elseif(TARGET RWS::sdurws_${_name})
+        set(result RWS::sdurws_${_name})
+        @PROJECT_PREFIX@_verify_target(${result} result ${ARGN})
+
+    elseif(TARGET RWSIM::${_name})
+        set(result RWSIM::${_name})
+        @PROJECT_PREFIX@_verify_target(${result} result ${ARGN})
+
+    elseif(TARGET sdurwsim_${_name})
+        set(result sdurwsim_${_name})
+        @PROJECT_PREFIX@_verify_target(${result} result ${ARGN})
+
+    elseif(TARGET RWSIM::sdurwsim_${_name})
+        set(result RWSIM::sdurwsim_${_name})
+        @PROJECT_PREFIX@_verify_target(${result} result ${ARGN})
+
+    elseif(tmp)
+        add_library(@PROJECT_PREFIX@::${_name} UNKNOWN IMPORTED)
+        set_target_properties(
+            @PROJECT_PREFIX@::${_name} PROPERTIES IMPORTED_LOCATION ${tmp} INTERFACE_INCLUDE_DIRECTORIES
+                                    "${@PROJECT_PREFIX@_BUILD_WITH_INCLUDE_DIR}"
+        )
+        set(result "@PROJECT_PREFIX@::${_name}")
+    else()
+        unset(tmp)
+        find_library(
+            tmp
+            NAMES ${_name} lib${_name}
+        )
+        if(tmp)
+            add_library(${_name} UNKNOWN IMPORTED)
+            set_target_properties(
+                ${_name} PROPERTIES IMPORTED_LOCATION ${tmp}
+            )
+            set(result "${_name}")
+        elseif(EXISTS ${_name})
+            set(result "${_name}")
+        else()
+            DEBUG_MESSAGE("Could not find library: ${_name}")
+        
+        endif()
+    endif()
+
+    set(varified_targets
+        ${varified_targets}
+        PARENT_SCOPE
+    )
+    set(invalid_targets
+        ${invalid_targets}
+        PARENT_SCOPE
+    )
+    set(${_result}
+        ${result}
+        PARENT_SCOPE
+    )
+endfunction()
+
+#####################################
+# Varify a target and check all it's dependencies
+function(@PROJECT_PREFIX@_VERIFY_TARGET __target __result)
+    if(NOT DEFINED DEBUG)
+        set(DEBUG FALSE)
+    endif()
+    set(idx -2)
+    set(idx_u -2)
+    set(idx_i -2)
+    if(TARGET ${__target})
+        set(result ${__target})
+        list(FIND varified_targets ${__target} idx)
+        list(FIND invalid_targets ${__target} idx_i)
+        list(FIND ARGN ${__target} idx_u)
+        if(${idx} EQUAL -1 AND ${idx_u} EQUAL -1 AND ${idx_i} EQUAL -1)
+            DEBUG_MESSAGE("${__target}")
+            set(underprocess ${ARGN} ${result})
+
+            # ######################################################################################
+            # Varifying underlying Binary
+            # ######################################################################################
+            get_target_property(type ${__target} TYPE)
+            if(NOT ("${type}" STREQUAL "INTERFACE_LIBRARY"))
+                get_target_property(out ${__target} IMPORTED_LOCATION_RELEASE)
+
+                if(NOT EXISTS ${out})
+                    get_target_property(out ${__target} IMPORTED_LOCATION_RELWITHDEBINFO)
+                endif()
+                if(NOT EXISTS ${out})
+                    get_target_property(out ${__target} IMPORTED_LOCATION_DEBUG)
+                endif()
+                if(NOT EXISTS ${out})
+                    get_target_property(out ${__target} IMPORTED_LOCATION_MINSIZEREL)
+                endif()
+                if(NOT EXISTS ${out})
+                    get_target_property(out ${__target} IMPORTED_LOCATION_NOCONFIG)
+                endif()
+                if(NOT EXISTS ${out})
+                    get_target_property(out ${__target} IMPORTED_LOCATION_NONE)
+                endif()
+                if(NOT EXISTS ${out})
+                    get_target_property(out ${__target} IMPORTED_LOCATION)
+                endif()
+
+                if(NOT EXISTS ${out})
+                    set(result "")
+                    DEBUG_MESSAGE(" - missing binary ${out}")
+                    DEBUG_MESSAGE(" - Target Binary not found: ${__target}")
+                endif()
+
+            endif()
+
+            # ######################################################################################
+            # Varifying include dirs
+            # ######################################################################################
+            if(result)
+                @PROJECT_PREFIX@_CORRECT_TARGET_INCLUDE_DIRS(${__target})
+                get_target_property(out ${__target} INTERFACE_INCLUDE_DIRECTORIES)
+                if(out)
+                    foreach(dir ${out})
+
+                        if(NOT EXISTS ${dir})
+                            DEBUG_MESSAGE(" - Include not found: ${dir}")
+                            set(result "")
+                        endif()
+                    endforeach()
+
+                    if(NOT result)
+                        DEBUG_MESSAGE(" - Target Include not found: ${__target}")
+                    endif()
+                endif()
+            endif()
+
+            # ######################################################################################
+            # Varifying dependencies
+            # ######################################################################################
+            if(result)
+                @PROJECT_PREFIX@_CORRECT_TARGET_DEPENDENCIES(${__target})
+                get_target_property(out ${__target} INTERFACE_LINK_LIBRARIES)
+                if(out)
+                    foreach(lib_t ${out})
+                        string(FIND ${lib_t} "\$<" found)
+                        if(${found} EQUAL -1)
+                            DEBUG_MESSAGE(" - Checking dep ${lib_t} for ${__target}")
+                            @PROJECT_PREFIX@_verify_library(${lib_t} vaified_lib "${underprocess}")
+                            if("${vaified_lib}" STREQUAL "")
+                                set(result "")
+                                DEBUG_MESSAGE(" - Target depend not found: ${lib_t} for ${__target}")
+                                break()  
+                            endif()
+                        else()
+                            DEBUG_MESSAGE(" - Target depend ignored: ${lib_t} for ${__target}")
+                        endif()
+                    endforeach()
+                    if(NOT result)
+                        DEBUG_MESSAGE(" - Target depend not found: ${__target}")
+                    endif()
+                endif()
+            endif()
+
+            # ######################################################################################
+            # Saving Result
+            # ######################################################################################
+            if(NOT ${result} STREQUAL "")
+                set(varified_targets ${varified_targets} ${result})
+                DEBUG_MESSAGE(" - Target varified: ${result}")
+            else()
+                set(invalid_targets ${invalid_targets} ${__target})
+            endif()
+        elseif(${idx} GREATER -1)
+            DEBUG_MESSAGE(" - Target ${__target} already verified")
+        elseif(${idx_u} GREATER -1)
+            DEBUG_MESSAGE(" - Target ${__target} ARGN verified")
+        elseif(${idx_i} GREATER -1)
+            DEBUG_MESSAGE(" - Target ${__target} Invalid target")
+            set(${__result} "")
+        endif()
+    else()
+        set(${__result} "")
+    endif()
+
+    set(invalid_targets
+        ${invalid_targets}
+        PARENT_SCOPE
+    )
+    set(varified_targets
+        ${varified_targets}
+        PARENT_SCOPE
+    )
+    set(${__result}
+        ${result}
+        PARENT_SCOPE
+    )
+endfunction()
+
+#####################################
+# only message if this is an install
+function(INSTALL_MESSAGE text)
+    if(IS_INSTALL)
+        message(STATUS ${text})
+    endif()
+endfunction()
+
+#####################################
+# Setup library, external and include directories.
+macro(@PROJECT_PREFIX@_SETUP_CONFIG_DIRECTORIES CFG_DIR)
+
+    # check whether @ROBWORK_PROJECT_NAME@Config.cmake is found into a @ROBWORK_PROJECT_NAME@ installation or in a build tree
+    if(EXISTS "${CFG_DIR}/../src/@ROBWORK_PROJECT_NAME@Config.hpp")
+        # Found @ROBWORK_PROJECT_NAME@Config.cmake in a build tree of @ROBWORK_PROJECT_NAME@
+        message(STATUS "@ROBWORK_PROJECT_NAME@: Found a @ROBWORK_PROJECT_NAME@ build tree")
+        set(@PROJECT_PREFIX@_ROOT "${CFG_DIR}/..")
+
+        set(@PROJECT_PREFIX@_INCLUDE_EXT "${@PROJECT_PREFIX@_ROOT}/ext")
+        set(@PROJECT_PREFIX@_INCLUDE_SRC "${@PROJECT_PREFIX@_ROOT}/src")
+        set(@PROJECT_PREFIX@_LIBS "${@PROJECT_PREFIX@_BUILD_WITH_BUILD_DIR}/libs/${@PROJECT_PREFIX@_BUILD_TYPE}")
+        set(IS_INSTALL FALSE)
+    else()
+        message(STATUS "@ROBWORK_PROJECT_NAME@: Found a @ROBWORK_PROJECT_NAME@ installation")
+        set(IS_INSTALL TRUE)
+        string(TOLOWER "@ROBWORK_PROJECT_NAME@" ROBWORK_PROJECT_NAME_LOWERCASE)
+        # Found a @ROBWORK_PROJECT_NAME@ installation
+        if(WIN32)
+            # @ROBWORK_PROJECT_NAME@Config.cmake is installed to @PROJECT_PREFIX@_ROOT/cmake
+            set(@PROJECT_PREFIX@_ROOT "${CFG_DIR}/../..")
+            set(@PROJECT_PREFIX@_INCLUDE_SRC
+                "${@PROJECT_PREFIX@_ROOT}/include/${ROBWORK_PROJECT_NAME_LOWERCASE}-${@ROBWORK_PROJECT_NAME@_VERSION_MAJOR}.${@ROBWORK_PROJECT_NAME@_VERSION_MINOR}"
+            )
+            set(@PROJECT_PREFIX@_INCLUDE_EXT "${@PROJECT_PREFIX@_INCLUDE_SRC}/ext")
+            set(@PROJECT_PREFIX@_LIBS "${@PROJECT_PREFIX@_ROOT}/lib")
+        else()
+            # @ROBWORK_PROJECT_NAME@Config.cmake is installed to @PROJECT_PREFIX@_ROOT/share/r@ROBWORK_PROJECT_NAME@-x.y/cmake
+            set(@PROJECT_PREFIX@_ROOT "${CFG_DIR}/../../..")
+            set(@PROJECT_PREFIX@_LIBS "${@PROJECT_PREFIX@_ROOT}/lib")
+            set(@PROJECT_PREFIX@_INCLUDE_SRC
+                "${@PROJECT_PREFIX@_ROOT}/include/${ROBWORK_PROJECT_NAME_LOWERCASE}-${@ROBWORK_PROJECT_NAME@_VERSION_MAJOR}.${@ROBWORK_PROJECT_NAME@_VERSION_MINOR}"
+            )
+            set(@PROJECT_PREFIX@_INCLUDE_EXT
+                "${@PROJECT_PREFIX@_ROOT}/include/${ROBWORK_PROJECT_NAME_LOWERCASE}-${@ROBWORK_PROJECT_NAME@_VERSION_MAJOR}.${@ROBWORK_PROJECT_NAME@_VERSION_MINOR}/ext"
+            )
+        endif()
+    endif()
+endmacro()
+
+######################################
+# Find required components or include all found components
+function(@PROJECT_PREFIX@_FIND_COMPONENTS _return)
+    string(TOUPPER "@ROBWORK_PROJECT_NAME@" ROBWORK_PROJECT_NAME_UPPERCASE)
+    string(TOLOWER "@PROJECT_PREFIX@" PROJECT_PREFIX_LOWERCASE)
+    set(${_return})
+    if(@ROBWORK_PROJECT_NAME@_FIND_COMPONENTS)
+        # FIRST check if all required components are installed/build
+        set(LIBRARIES_TO_INCLUDE @PROJECT_PREFIX@::sdu${PROJECT_PREFIX_LOWERCASE})
+        foreach(
+            component
+            IN
+            LISTS @ROBWORK_PROJECT_NAME@_FIND_COMPONENTS
+        )
+            if(NOT (${component} STREQUAL "sdu${PROJECT_PREFIX_LOWERCASE}"))
+                unset(res)
+                verify_library(${component} res)
+
+                if(NOT "${res}" STREQUAL "")
+                    list(APPEND ${_return} "${res}")
+                    set(@ROBWORK_PROJECT_NAME@_${component}_FOUND TRUE)
+                else()
+                    set(@ROBWORK_PROJECT_NAME@${component}_FOUND FALSE)
+                    if(@ROBWORK_PROJECT_NAME@_REQUIRED)
+                        set(@ROBWORK_PROJECT_NAME@_EXPERIENCED_FATAL_PROBLEMS TRUE)
+                        message(
+                            FATAL_ERROR
+                                "The component: sdu${PROJECT_PREFIX_LOWERCASE}_${component} has not been built with @ROBWORK_PROJECT_NAME@. Reconfigure @ROBWORK_PROJECT_NAME@ installation or check component spelling!"
+                        )
+                    else()
+                        set(@ROBWORK_PROJECT_NAME@_EXPERIENCED_FATAL_PROBLEMS TRUE)
+                        message(
+                            WARNING
+                                "The component: sdu${PROJECT_PREFIX_LOWERCASE}_${component} has not been built with @ROBWORK_PROJECT_NAME@. Reconfigure @ROBWORK_PROJECT_NAME@ installation or check component spelling!"
+                        )
+                    endif()
+                endif()
+            endif()
+        endforeach()
+    else()
+        foreach(
+            lib
+            IN
+            LISTS @PROJECT_PREFIX@_BUILD_WITH_LIBRARIES
+        )
+            unset(res)
+            @PROJECT_PREFIX@_verify_library(${lib} res)
+            if(NOT "${res}" STREQUAL "")
+                list(APPEND ${_return} "${res}")
+                INSTALL_MESSAGE("Looking for ${lib} - found")
+            else()
+                if(${lib} STREQUAL "sdu${PROJECT_PREFIX_LOWERCASE}" AND @ROBWORK_PROJECT_NAME@_REQUIRED)
+                    list(APPEND ${_return} "@PROJECT_PREFIX@::${lib}")
+                    message(FATAL_ERROR "Looking for ${lib} - not found" )
+                else()
+                    INSTALL_MESSAGE("Looking for ${lib} - not found (ignored)")
+                endif()
+            endif()
+        endforeach()
+    endif()
+
+    set(${_return} ${${_return}} PARENT_SCOPE)
+endfunction()
+
+#######################################
+# Setup linker flags and build definitions
+macro(@PROJECT_PREFIX@_SETUP_FLAGS_AND_DEFINITIONS)
+    # Set extra compiler flags. The user should be able to change this
+    set(@PROJECT_PREFIX@_C_FLAGS
+    ${@PROJECT_PREFIX@_BUILD_WITH_C_FLAGS}
+    CACHE STRING "Change this to force using your own
+                flags and not those of @ROBWORK_PROJECT_NAME@"
+    )
+    set(@PROJECT_PREFIX@_CXX_FLAGS
+        ${@PROJECT_PREFIX@_BUILD_WITH_CXX_FLAGS}
+        CACHE STRING "Change this to force using your own
+                    flags and not those of @ROBWORK_PROJECT_NAME@"
+    )
+    set(@PROJECT_PREFIX@_DEFINITIONS
+        ${@PROJECT_PREFIX@_BUILD_WITH_DEFINITIONS}
+        CACHE STRING "Change this to force using your own
+                    definitions and not those of @ROBWORK_PROJECT_NAME@"
+    )
+    add_definitions(${@PROJECT_PREFIX@_DEFINITIONS})
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${@PROJECT_PREFIX@_CXX_FLAGS}")
+    set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} ${@PROJECT_PREFIX@_C_FLAGS}")
+
+    # Set extra linker flags. The user should be able to change this
+    set(@PROJECT_PREFIX@_LINKER_FLAGS
+        ${@PROJECT_PREFIX@_BUILD_WITH_LINKER_FLAGS}
+        CACHE STRING "Change this to force using your own linker
+                    flags and not those of @ROBWORK_PROJECT_NAME@"
+    )
+    set(CMAKE_SHARED_LINKER_FLAGS
+        "${CMAKE_SHARED_LINKER_FLAGS} ${@PROJECT_PREFIX@_LINKER_FLAGS}"
+        CACHE STRING "" FORCE
+    )
+    set(CMAKE_MODULE_LINKER_FLAGS
+        "${CMAKE_MODULE_LINKER_FLAGS} ${@PROJECT_PREFIX@_LINKER_FLAGS}"
+        CACHE STRING "" FORCE
+    )
+    if(WIN32)
+        set(CMAKE_EXE_LINKER_FLAGS
+            "${CMAKE_EXE_LINKER_FLAGS} ${@PROJECT_PREFIX@_LINKER_FLAGS}"
+            CACHE STRING "" FORCE
+        )
+    endif()
+endmacro()
+
+#######################################
+# Generate boost targets for windows exe installs
+macro(@PROJECT_PREFIX@_GENERATE_BOOST_EXE_TARGETS)
+    foreach(pkg filesystem serialization system thread program_options)
+        if (NOT TARGET Boost::${pkg})
+            FILE(GLOB boostlib "${@PROJECT_PREFIX@_LIBS}/libboost_${pkg}-*")
+            add_library(Boost::${pkg} UNKNOWN IMPORTED)
+            set_target_properties(Boost::${pkg}  PROPERTIES
+                INTERFACE_INCLUDE_DIRECTORIES ${@PROJECT_PREFIX@_INCLUDE_EXT}/boost
+                IMPORTED_LOCATION ${boostlib}
+            )
+        endif()
+    endforeach()
+    set(Boost_FOUND TRUE)
+endmacro()

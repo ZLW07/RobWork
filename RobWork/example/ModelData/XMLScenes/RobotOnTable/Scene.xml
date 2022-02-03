@@ -1,0 +1,53 @@
+<WorkCell name="Scene">
+  <Frame name="Table" refframe="WORLD" >
+    <RPY>0 0 0</RPY><Pos>0.2 0.2 -0.408</Pos>
+  </Frame>
+  <Drawable name="Table" refframe="Table" >
+    <RPY> 0 0 0</RPY> <Pos> 0 0 0 </Pos>
+    <Box x="0.8" y="0.8" z="0.816" />
+  </Drawable>
+
+  <Frame name="URMount">
+    <RPY>90 0 0</RPY><Pos>0 0 0</Pos>
+  </Frame>
+  <Include file="../../XMLDevices/UR-6-85-5-A/UR.wc.xml" />
+
+  <Frame name="m_box" refframe="WORLD" type="Movable" daf="true">
+    <Transform>
+      	1 0 0 0.4
+      	0 1 0 0.4
+      	0 0 -1 0.05
+    </Transform>
+
+    <Drawable name="m_box" refframe="m_box" colmodel="Enabled">
+      	<Pos>0 0 0</Pos>
+      	<RPY>0 0 0</RPY>
+      	<Box x="0.08" y="0.08" z="0.08"/>
+    </Drawable>
+    <CollisionModel name="m_box_col" refframe="m_box0">
+      	<Pos>0 0 0</Pos>
+      	<RPY>0 0 0</RPY>
+      	<Box x="0.08" y="0.08" z="0.08"/>
+    </CollisionModel>
+  </Frame>
+
+  <Frame name="m_box2" refframe="WORLD" type="Movable" daf="true">
+    	<Transform>
+      	1 0 0 0
+      	0 1 0 0.4
+      	0 0 -1 0.05
+    </Transform>
+
+    <Drawable name="m_box2" refframe="m_box2" colmodel="Enabled">
+      	<Pos>0 0 0</Pos>
+      	<RPY>0 0 0</RPY>
+      	<Box x="0.08" y="0.08" z="0.08"/>
+    </Drawable>
+    <CollisionModel name="m_box2_col" refframe="m_box2">
+      	<Pos>0 0 0</Pos>
+      	<RPY>0 0 0</RPY>
+      	<Box x="0.08" y="0.08" z="0.08"/>
+    </CollisionModel>
+  </Frame>
+
+</WorkCell>
